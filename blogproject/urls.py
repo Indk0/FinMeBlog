@@ -1,5 +1,5 @@
 """
-URL configuration for mainblog project.
+URL configuration for blogproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -20,7 +20,7 @@ from fin_blog import views as index_views
 from secondaryblog import views as secondaryblog_views
 
 urlpatterns = [
-    path('mainblog/', index_views.index, name='index'),
+    path('fin_blog/', index_views.index, name='index'),
     path('secondaryblog/', secondaryblog_views.secondaryblog_me, name='secondaryblog'),
     path('admin/', admin.site.urls),
 ]
