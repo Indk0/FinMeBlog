@@ -1,5 +1,5 @@
 ---
-name: Developer Template
+name: Developer Story Template
 about: Describe this issue template's purpose from the developer point of view.
 title: DEVELOPER STORY
 labels: ''
