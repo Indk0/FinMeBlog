@@ -36,8 +36,15 @@
 
 ## Project Overview
 ### Key goals
+#### The key goal for this project is to create a functioning personal finance blog for readers who want to increase their personal finance knowledge. Readers will be able to select from a variety of blog which explore topics from investing to budgeting. The blog will also have a carousel of stocks on the home and blog pages, this however will be a could have feature.
 ### Target audience
+#### My target audience are people who are interested in personal finance aged between 18-35, my target audience could be as young as 16. My target audience will also be very aware of how important financial health is for themselves.
 ### User Requirements
+#### Must Have:
+### Inspiration
+#### The inspiration from for this blog comes from a similiar site called Yahoo Finance, I have used Yahoo Finance in the past to read on news regarding the economy and the financial health of American technology companies. The key difference is that FinMe will be tailored more towards to personal finance instead of the American stock market. 
+
+#### Yahoo Finance is more geared towards readers who have an advanced knowledge in topics such as the economy and the American stock market, FinMe will be aimed at readers who are at the beginning stages of their personal financial journey to advanced readers who might want to use FinMe as an analysis platform to gauge on consumer interest.
 
 ## Planning
 ### Wireframes
