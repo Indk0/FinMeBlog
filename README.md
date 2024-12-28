@@ -49,7 +49,9 @@
 ## Planning
 ### Wireframes
 #### Here are my wireframes for this project.
-[Wireframe for Home Page](./readmemedia/wireframes/HomePage.pdf)
+- [Wireframe for Home Page](./readmemedia/wireframes/HomePage.pdf)
+- [Wireframe for Blog Page](./readmemedia/wireframes/BlogPage.pdf)
+- [Wireframe for Blog Page Footer](./readmemedia/wireframes/BlogPageFooter.pdf)
 ### ERD Diagrams
 ### Security
 
