@@ -48,12 +48,15 @@
 
 ## Planning
 ### Wireframes
-#### Here are my wireframes for this project.
+#### Here are my wireframes for this project, the mobile and desktop version are in one document for each wireframe.
 - [Wireframe for Home Page](./readmemedia/wireframes/HomePage.pdf)
 - [Wireframe for Blog Page](./readmemedia/wireframes/BlogPage.pdf)
 - [Wireframe for Blog Page Footer](./readmemedia/wireframes/BlogPageFooter.pdf)
 ### ERD Diagrams
+#### The ERD Diagram was made using a tool called Lucidchart.
+[ERD Diagram](./readmemedia/ERD/FinMe%20ERD.pdf)
 ### Security
+
 
 ## Project Management
 ### Agile Methodologies
