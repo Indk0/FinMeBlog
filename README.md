@@ -60,9 +60,20 @@
 
 ## Project Management
 ### Agile Methodologies
+#### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
+### User Epics
+
 ### User Story
+#### There are two types of user story template I have created: a user and a developer template, the user template is created with the statement and acceptance criteria from the user perspective on the other hand, the developer template is created to help myself track goals through the statement and acceptance criteria. Most sprint kanban boards will have the developer template however, the user template can be added.
 ### MoSCoW
+#### MoSCoW is used for the user stories, these are the labels used: Must Have, Could Have, Should Have and Future Consideration. Instead of using the "Won't Have" label, I will aim to create user stories based on features I could add to my blog in the future by using the label "Future Consideration". 
 ### Sprints
+#### I have broken down my project into 5 different sprints, for each sprint will have a dedicated label to help mark a user story:
+* Sprint 1: Initial Setup - The goal for this sprint is to complete the foundational set up for to allow for the project to tkae shape, this includes planning the wireframes, creating the readme file, downloading all the packages, creating the folders and files.  
+* Sprint 2: Data - This sprint is dedicated to creating the models for the blog functionality this includes creating and refining the ERD diagram.
+* Sprint 3: Admin - 
+* Sprint 4: Templates and Auth -
+* Sprint 5: Functionality and Cloudinary -
 
 ## Design
 ### Colour Pallets
