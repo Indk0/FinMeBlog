@@ -39,8 +39,11 @@
 #### The key goal for this project is to create a functioning personal finance blog for readers who want to increase their personal finance knowledge. Readers will be able to select from a variety of blog which explore topics from investing to budgeting. The blog will also have a carousel of stocks on the home and blog pages, this however will be a could have feature.
 ### Target audience
 #### My target audience are people who are interested in personal finance aged between 18-35, my target audience could be as young as 16. My target audience will also be very aware of how important financial health is for themselves.
-### User Requirements
-#### Must Have:
+### User Requirements -  The projects have all of the in-depth issues. These are the basic user requirements:
+#### Must Have: User Should be able to access the site and read the many blogs available.
+#### Should Have: Should blogs may contain guides and tips to help readers take actionable steps on their personal finances.
+#### Could Have: Readers can also create accounts from which they can post blogs and comment
+### Future consideration are listed at the bottom of this ReadMe file.
 ### Inspiration
 #### The inspiration from for this blog comes from a similiar site called Yahoo Finance, I have used Yahoo Finance in the past to read on news regarding the economy and the financial health of American technology companies. The key difference is that FinMe will be tailored more towards to personal finance instead of the American stock market. 
 
@@ -62,7 +65,8 @@
 ### Agile Methodologies
 #### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
 ### User Epics
-
+#### The user epics are stored in the Financial Blog kanban board.
+- [Financial Blog kanban board screenshot at the time of building the project.](./readmemedia/Userepickanban.png)
 ### User Story
 #### There are two types of user story template I have created: a user and a developer template, the user template is created with the statement and acceptance criteria from the user perspective on the other hand, the developer template is created to help myself track goals through the statement and acceptance criteria. Most sprint kanban boards will have the developer template however, the user template can be added.
 ### MoSCoW
