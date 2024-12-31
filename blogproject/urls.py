@@ -18,9 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from fin_blog import views as index_views
 from secondaryblog import views as secondaryblog_views
+from fin_blog import views
 
 urlpatterns = [
     path('fin_blog/', index_views.index, name='index'),
     path('secondaryblog/', secondaryblog_views.secondaryblog_me, name='secondaryblog'),
     path('admin/', admin.site.urls),
+    path('', views.post_list, name='post_list'),   
+    path('post/<slug:slug>/', views.post_detail, name='post_detail'),   
+    path('post/new/', views.create_post, name='create_post'),   
+    path('post/<slug:slug>/comment/', views.add_comment, name='add_comment'),   
 ]
