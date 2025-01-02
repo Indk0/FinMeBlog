@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('fin_blog.urls')),
     path('fin_blog/', index_views.index, name='index'),
     path('secondaryblog/', secondaryblog_views.secondaryblog_me, name='secondaryblog'),
-    path('admin/', admin.site.urls),  
+    path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
 ]
