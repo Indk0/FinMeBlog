@@ -160,3 +160,38 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+/* Footer Icon Styles */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally centres the content */
+    justify-content: center; /* Vertically centres the content */
+    text-align: center; 
+}
+
+.footer p {
+    margin: 0;
+    margin-bottom: 10px; /* Adds space below the text */
+}
+
+.footer a {
+    margin: 0 10px; 
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer i {
+    font-size: 1.5rem; /* Sets consistent icon size */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Adds hover effect */
+}
+
+.footer a:hover i {
+    color: #E84610; /* Changes color on hover */
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+}
+
+
+
+
