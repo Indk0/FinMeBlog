@@ -9,7 +9,7 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for post in posts %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -21,7 +21,7 @@
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
-
+                            <p class="card-text">{{post.excerpt}}</p>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}}
                             </p>
