@@ -9,7 +9,7 @@ def index(request):
 
 def post_list(request):
     posts = Post.objects.filter(status=1).order_by('-created_on')
-    return render(request, 'fin_blog/post_list.html', {'posts': posts})
+    return render(request, 'fin_blog/index.html', {'posts': posts})
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
