@@ -5,4 +5,4 @@ gunicorn==20.1.0
 psycopg2==2.9.10
 sqlparse==0.5.3
 whitenoise==6.5.0
-django-summarnote==0.8.20.0
+django-summarnote==0.8.20
