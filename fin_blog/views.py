@@ -14,7 +14,7 @@ def post_list(request):
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(approved=True, post=post)  
-    return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments})
+    return render(request, 'fin_blog/post_detail.html', {'post': post, 'comments': comments})
 
 # Create a new post
 @login_required
