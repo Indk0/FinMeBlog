@@ -75,9 +75,13 @@
 #### I have broken down my project into 5 different sprints, for each sprint will have a dedicated label to help mark a user story:
 * Sprint 1: Initial Setup - The goal for this sprint is to complete the foundational set up for to allow for the project to tkae shape, this includes planning the wireframes, creating the readme file, downloading all the packages, creating the folders and files.  
 * Sprint 2: Data - This sprint is dedicated to creating the models for the blog functionality this includes creating and refining the ERD diagram.
-* Sprint 3: Admin - 
-* Sprint 4: Templates and Auth -
-* Sprint 5: Functionality and Cloudinary -
+* Sprint 3: Admin - At this stage my goal will be to improve the admin panel UX and add fixture data to test my blog.
+* Sprint 4: Templates and Functionality - This is the stage where html and css templates will be created for the various pages my blog will host, the functionality code will be a mixture of could and should have user stories. these codes will make the blog better in terms of UX. 
+* Sprint 5: Auth and Cloudinary - This is the final stage of my MVP, at this stage I will create a signup page using the package AllAuth and connect Cloudinary for image upload.
+* Sprint 6: Blog Styling/Extras-
+
+## MVP
+### Up to sprint 6
 
 ## Design
 ### Colour Pallets
