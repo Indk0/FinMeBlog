@@ -66,8 +66,8 @@
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete"onclick="location.href='{% url 'delete_comment' comment.id %}'">Delete</button>
+                    <button class="btn btn-edit"onclick="location.href='{% url 'edit_comment' comment.id %}'">Edit</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->

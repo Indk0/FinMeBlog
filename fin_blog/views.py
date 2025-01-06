@@ -6,7 +6,6 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.messages import get_messages
 
-
 def index(request):
     return HttpResponse("This is an easter egg!!!")
 
@@ -55,9 +54,29 @@ def add_comment(request, slug):
             comment.save()  # Save to the database
             messages.success(request, "Your comment has been submitted and is awaiting approval.")
             return redirect('post_detail', slug=post.slug)
-        # else:
-        #     messages.error(request, "There was an error submitting your comment.")      
+
     else:
         form = CommentForm()
 
     return render(request, 'fin_blog/post_detail.html',{'post': post,'comment_form': form,})
+
+#Delete and edit comment from the blog page functionality
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, author=request.user)
+    comment.delete()
+    messages.success(request, "Your comment has been deleted.")
+    return redirect('post_detail', slug=comment.post.slug)
+
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, author=request.user)
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your comment has been edited.")
+            return redirect('post_detail', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'fin_blog/edit_comment.html', {'form': form, 'comment': comment})

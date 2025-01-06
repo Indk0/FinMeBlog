@@ -10,3 +10,6 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['body']
+        labels = { 'body': 'Type your comment in the box below!!'}
+
+
