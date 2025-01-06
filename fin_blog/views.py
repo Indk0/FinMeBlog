@@ -3,6 +3,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, Comment, Category
 from .forms import PostForm, CommentForm
 from django.http import HttpResponse
+from django.contrib import messages
+from django.contrib.messages import get_messages
+
 
 def index(request):
     return HttpResponse("This is an easter egg!!!")
@@ -11,10 +14,14 @@ def post_list(request):
     posts = Post.objects.filter(status=1).order_by('-created_on')
     return render(request, 'fin_blog/index.html', {'posts': posts})
 
+# View for displaying post details
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    comments = post.comments.filter(approved=True, post=post)  
-    return render(request, 'fin_blog/post_detail.html', {'post': post, 'comments': comments})
+    comments = post.comments.filter(approved=True).order_by('-created_on')  # Fetch only approved comments
+    comment_count = comments.count()  # Count approved comments
+    comment_form = CommentForm()  # Empty form for authenticated users
+   
+    return render(request,'fin_blog/post_detail.html', {'post': post,'comments': comments, 'comment_count': comment_count, 'comment_form': comment_form,})
 
 # Create a new post
 @login_required
@@ -35,6 +42,9 @@ def create_post(request):
 @login_required
 def add_comment(request, slug):
     post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.filter(approved=True).order_by('-created_on')
+    comment_count = comments.count()
+
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -42,7 +52,18 @@ def add_comment(request, slug):
             comment.post = post
             comment.author = request.user
             comment.save()
-            return redirect('post_detail', slug=post.slug)
+            messages.success(request, "Your comment has been submitted and is awaiting approval.")
+            
     else:
         form = CommentForm()
-    return render(request, 'fin_blog/add_comment.html', {'form': form, 'post': post})
+
+    return render(
+        request,
+        'fin_blog/post_detail.html',
+        {
+            'post': post,
+            'comments': comments,
+            'comment_count': comment_count,
+            'comment_form': form,
+        }
+    )
