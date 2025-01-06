@@ -24,14 +24,6 @@
 </div>
 
 <div class="container">
-    <!-- Display message code -->
-    {% if messages %}
-    <div class="alert alert-success">
-        {% for message in messages %}
-        <p>{{ message }}</p>
-        {% endfor %}
-    </div>
-    {% endif %}
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
@@ -87,7 +79,16 @@
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                <!-- Display message code -->
+                {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <form id="commentForm" method="post" action="{% url 'add_comment' slug=post.slug %}"
+                    style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
@@ -121,5 +122,6 @@
 {% endblock content %}
 
 {% block extras %}
+<script src="{% static 'js/messageHandler.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

@@ -48,22 +48,16 @@ def add_comment(request, slug):
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
+            # Save the comment
             comment = form.save(commit=False)
-            comment.post = post
-            comment.author = request.user
-            comment.save()
+            comment.post = post  # Set the related post
+            comment.author = request.user  # Set the author
+            comment.save()  # Save to the database
             messages.success(request, "Your comment has been submitted and is awaiting approval.")
-            
+            return redirect('post_detail', slug=post.slug)
+        # else:
+        #     messages.error(request, "There was an error submitting your comment.")      
     else:
         form = CommentForm()
 
-    return render(
-        request,
-        'fin_blog/post_detail.html',
-        {
-            'post': post,
-            'comments': comments,
-            'comment_count': comment_count,
-            'comment_form': form,
-        }
-    )
+    return render(request, 'fin_blog/post_detail.html',{'post': post,'comment_form': form,})

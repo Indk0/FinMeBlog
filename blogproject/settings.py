@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-$yqy286v9+79u%2i+xr+*biq6j-4fv*ww0p9#j9g9j66)ks14*
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-indk0-finmeblog-b79je5j4weg.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -79,7 +79,7 @@ ROOT_URLCONF = 'blogproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "static"],
+        'DIRS': [BASE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
