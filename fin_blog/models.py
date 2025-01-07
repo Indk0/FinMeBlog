@@ -4,9 +4,12 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Reaction(models.Model):
-    post = models.ForeignKey('fin_blog.Post', on_delete=models.CASCADE, related_name="reactions")
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_reactions")
+    post = models.ForeignKey(
+        'fin_blog.Post', on_delete=models.CASCADE, related_name="reactions")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_reactions")
     reaction = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -14,8 +17,12 @@ class Reaction(models.Model):
     class Meta:
         unique_together = ('post', 'user')
 
-    def __str__(self):
-        return f"{self.user.username} {'Liked' if self.reaction else 'Disliked'} {self.post.title}"
+    def __str__(self): return (
+        f"{self.user.username} "
+        f"{'Liked' if self.reaction else 'Disliked'} "
+        f"{self.post.title}"
+    )
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -25,10 +32,11 @@ class Category(models.Model):
 
     class Meta:
         ordering = ["name"]
-        verbose_name_plural = "Categories" 
+        verbose_name_plural = "Categories"
 
     def __str__(self):
         return self.name
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -45,7 +53,7 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title) 
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -53,6 +61,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+
 
 class Comment(models.Model):
     post = models.ForeignKey(
