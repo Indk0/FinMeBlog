@@ -58,6 +58,7 @@
 ### ERD Diagrams
 #### The ERD Diagram was made using a tool called Lucidchart.
 [ERD Diagram](./readmemedia/ERD/FinMe%20ERD.pdf)
+#### A change was made to the database
 ### Security
 
 
@@ -66,9 +67,13 @@
 #### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
 ### User Epics
 #### The user epics are stored in the Financial Blog kanban board.
-- [Financial Blog kanban board screenshot at the time of building the project.](./readmemedia/Userepickanban.png)
+- [Financial Blog kanban board screenshot at the time of building the project.](./readmemedia/screenshots/Userepickanban.png)
 ### User Story
-#### There are two types of user story template I have created: a user and a developer template, the user template is created with the statement and acceptance criteria from the user perspective on the other hand, the developer template is created to help myself track goals through the statement and acceptance criteria. Most sprint kanban boards will have the developer template however, the user template can be added.
+#### There are two types of user story template I have created: a user and a developer template, the user template is created with the statement and acceptance criteria from the user perspective on the other hand, the developer template is created to help myself track goals through the statement and acceptance criteria. Most sprint kanban boards will have the developer template however, the user template can be added. Below is an example of a user story on a kanban board, please click on the user story title to see the acceptance criteria and the user story statement.
+
+![User Stories on Kanban board](./readmemedia/screenshots/Userstoryexample.png)
+![User Story when clicked on](./readmemedia/screenshots/Userstoryexample1.png)
+
 ### MoSCoW
 #### MoSCoW is used for the user stories, these are the labels used: Must Have, Could Have, Should Have and Future Consideration. Instead of using the "Won't Have" label, I will aim to create user stories based on features I could add to my blog in the future by using the label "Future Consideration". 
 ### Sprints
@@ -81,7 +86,7 @@
 * Sprint 6: Blog Styling/Extras-
 
 ## MVP
-### Up to sprint 6
+### 
 
 ## Design
 ### Colour Pallets
@@ -103,6 +108,5 @@
 ## Future Features
 
 ## Credits
-## Inspiration
 
 ## Acknowledgements
