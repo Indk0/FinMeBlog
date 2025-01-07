@@ -85,8 +85,12 @@
 * Sprint 5: Auth and Cloudinary - This is the final stage of my MVP, at this stage I will create a signup page using the package AllAuth and connect Cloudinary for image upload.
 * Sprint 6: Blog Styling/Extras-
 
-## MVP
-### 
+## MVP (Minimal Viable Product)
+### I complete my MVP with the minimal amount of user/developer stories closed. My MVP, as seen in the image below, shows all of the acceptance criteria ticked, the MVP allows users to read and comment on any blog once registered and logged in. In this case the admin has majority of the features accessable as the admin can create and edit blogs, categories, comments, manipulate user and accounts all from the admin panel. 
+
+![MVP Developer Story](./readmemedia/screenshots/MVPdeveloperstory.png) 
+
+### The MVP blog site has some downsides if used as a product, users will not be able to create blogs as authors this is due to the lack of an account functionality where the author (user) can track the blogs and comments posted in the site. Another downside for the MVP is there's no image upload feature for the author and tha admin, this will significantly impact the user experience as images can help to set the tone for the blog.
 
 ## Design
 ### Colour Pallets
@@ -95,7 +99,8 @@
 ## Technologies
 ### Languages/Frameworks
 ### Database
-### Other tools
+### Other tools used
+#### 
 ### Deployment
 ## GitHub Deployment
 ## Deploying with Heroku
