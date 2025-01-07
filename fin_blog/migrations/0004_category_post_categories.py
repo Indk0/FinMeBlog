@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, unique=True)),
                 ('slug', models.SlugField(max_length=100, unique=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
@@ -26,6 +27,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='categories',
-            field=models.ManyToManyField(related_name='posts', to='fin_blog.category'),
+            field=models.ManyToManyField(
+                related_name='posts', to='fin_blog.category'),
         ),
     ]
