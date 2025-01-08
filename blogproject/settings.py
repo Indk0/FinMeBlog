@@ -32,8 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-indk0-finmeblog-b79je5j4weg.ws.codeinstitute-ide.net',
-    '.herokuapp.com']
+    '8000-indk0-finmeblog-b79je5j4weg.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
