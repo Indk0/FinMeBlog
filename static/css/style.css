@@ -62,9 +62,11 @@ body {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
+    display: block;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .masthead-text {
@@ -76,6 +78,13 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+}
+
+.masthead-image img {
+    display: block;
+    margin: 20px auto; /* Centers the image */
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
 }
 
 .masthead-image:after {
@@ -197,23 +206,28 @@ body {
     display: none;
 }
 
-/* Blog post image issue */
+@media (max-width: 425px) {
+    .masthead {
+        width: 90%; 
+    }
 
-.masthead {
-    position: relative; /* Ensures it stays in the layout */
-    z-index: 1; /* Ensures the masthead appears in the correct stack */
-    background-color: transparent
-    padding: 20px 0; /* Adds spacing to avoid overlapping */
-    overflow: hidden; /* Prevents hidden elements */
-}
+    .masthead-text {
+        text-align: center; 
+        padding: 15px;
+    }
 
-.masthead-text {
-    position: relative;
-    z-index: 3; /* Higher than the image */
-    margin-bottom: 20px; /* Add space between the title and image */
-}
+    .masthead img {
+        width: 100%;
+        height: auto; 
+        margin: 10px auto; 
+    }
 
-.masthead img {
-    position: relative;
-    z-index: 2;
+    .post-title {
+        font-size: 1.5rem; 
+        word-wrap: break-word; 
+    }
+
+    .post-subtitle {
+        font-size: 0.9rem; 
+    }
 }

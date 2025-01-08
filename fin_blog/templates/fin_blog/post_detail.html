@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="masthead">
-    <div class="container marker-class-1">
+    <div class="container">
         <!-- Post Title Section -->
         <div class="row g-0">
             <div class="col-md-12 masthead-text text-center mt-3">
@@ -12,14 +12,10 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
         </div>
-
         <!-- Featured Image Section -->
-        <div class="row g-0 marker-class-2">
+        <div class="row g-0">
             <div class="col-12 text-center mt-3">
                 <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid">
-                
-                <!-- Add Debugging Statement Below -->
-                <p>Image URL: {{ post.featured_image.url }}</p>
             </div>
         </div>
     </div>
@@ -69,8 +65,10 @@
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete"onclick="location.href='{% url 'delete_comment' comment.id %}'">Delete</button>
-                    <button class="btn btn-edit"onclick="location.href='{% url 'edit_comment' comment.id %}'">Edit</button>
+                    <button class="btn btn-delete"
+                        onclick="location.href='{% url 'delete_comment' comment.id %}'">Delete</button>
+                    <button class="btn btn-edit"
+                        onclick="location.href='{% url 'edit_comment' comment.id %}'">Edit</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
