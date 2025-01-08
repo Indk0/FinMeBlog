@@ -16,4 +16,5 @@ urlpatterns = [
          views.delete_category, name='delete_category'),
     path('admin/categories/', views.admin_category_list,
          name='admin_category_list'),
+    path('category/<slug:slug>/', views.category_posts, name='category_posts'),
 ]

@@ -153,4 +153,19 @@ def delete_category(request, category_id):
 @staff_member_required
 def admin_category_list(request):
     unapproved_categories = Category.objects.filter(approved=False)
-    return render(request, 'admin_category_list.html', {'unapproved_categories': unapproved_categories})
+    return render(
+        request,
+        'admin_category_list.html',
+        {'unapproved_categories': unapproved_categories})
+
+# Filter posts by category
+
+
+def category_posts(request, slug):
+    category = get_object_or_404(Category, slug=slug, approved=True)
+    posts = category.posts.filter(status=1).order_by(
+        '-created_on')  # Filter published posts
+    return render(request, 'fin_blog/category_posts.html', {
+        'category': category,
+        'posts': posts
+    })

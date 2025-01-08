@@ -76,7 +76,9 @@ def edit_comment(request, comment_id):
 @login_required
 def category_list(request):
     categories = Category.objects.all()
-    return render(request, 'accounts/category_list.html', {'categories': categories})
+    return render(
+        request, 
+        'accounts/category_list.html', {'categories': categories})
 
 
 @login_required
@@ -107,7 +109,9 @@ def edit_category(request, category_id):
             return redirect('category_list')
     else:
         form = CategoryForm(instance=category)
-    return render(request, 'accounts/edit_category.html', {'form': form, 'category': category})
+    return render(
+        request, 
+        'accounts/edit_category.html', {'form': form, 'category': category})
 
 
 @login_required
@@ -116,4 +120,6 @@ def delete_category(request, category_id):
     if request.method == 'POST':
         category.delete()
         return redirect('category_list')
-    return render(request, 'accounts/delete_category.html', {'category': category})
+    return render(
+        request, 
+        'accounts/delete_category.html', {'category': category})
