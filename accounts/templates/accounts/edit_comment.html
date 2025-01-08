@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Edit Comment</h2>
+    <p>Type your comment in the box below!</p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <textarea name="body" id="body" class="form-control" rows="4">{{ form.body.value }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+{% endblock %}
