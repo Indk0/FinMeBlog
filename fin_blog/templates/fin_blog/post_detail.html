@@ -4,24 +4,27 @@
 
 {% block content %}
 <div class="masthead">
-    <div class="container">
+    <div class="container marker-class-1">
+        <!-- Post Title Section -->
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+            <div class="col-md-12 masthead-text text-center mt-3">
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
-                {% else %}
-                <!-- <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">  -->
-                {% endif %}
+        </div>
+
+        <!-- Featured Image Section -->
+        <div class="row g-0 marker-class-2">
+            <div class="col-12 text-center mt-3">
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid">
+                
+                <!-- Add Debugging Statement Below -->
+                <p>Image URL: {{ post.featured_image.url }}</p>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">

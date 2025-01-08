@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -50,6 +51,12 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="posts")
+
+    featured_image = CloudinaryField(
+        'image',
+        default='default_rolq52'
+        # Cloudinary public ID for the default image
+    )
 
     def save(self, *args, **kwargs):
         if not self.slug:

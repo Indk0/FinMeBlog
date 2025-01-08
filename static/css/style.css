@@ -197,5 +197,23 @@ body {
     display: none;
 }
 
+/* Blog post image issue */
 
+.masthead {
+    position: relative; /* Ensures it stays in the layout */
+    z-index: 1; /* Ensures the masthead appears in the correct stack */
+    background-color: transparent
+    padding: 20px 0; /* Adds spacing to avoid overlapping */
+    overflow: hidden; /* Prevents hidden elements */
+}
 
+.masthead-text {
+    position: relative;
+    z-index: 3; /* Higher than the image */
+    margin-bottom: 20px; /* Add space between the title and image */
+}
+
+.masthead img {
+    position: relative;
+    z-index: 2;
+}

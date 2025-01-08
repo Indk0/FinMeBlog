@@ -27,7 +27,8 @@ class ReactionAdmin(admin.ModelAdmin):
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     list_display = (
-        'title', 'author', 'status', 'slug', 'created_on', 'updated_on')
+        'title', 'author', 'status', 'slug', 'created_on', 'updated_on',
+        'featured_image')
     search_fields = ['title', 'content', 'slug']
     list_filter = ('status', 'categories', 'created_on')
     prepopulated_fields = {'slug': ('title',)}

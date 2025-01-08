@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from fin_blog import views as index_views
 from secondaryblog import views as secondaryblog_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +32,9 @@ urlpatterns = [
         name='secondaryblog'),
     path('summernote/', include('django_summernote.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )
