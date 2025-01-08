@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from fin_blog.views import create_post
 
 urlpatterns = [
     path('profile/', views.profile, name='profile'),
@@ -14,4 +15,5 @@ urlpatterns = [
          views.edit_category, name='edit_category'),
     path('categories/<int:category_id>/delete/',
          views.delete_category, name='delete_category'),
+    path('create_post/', create_post, name='create_post'),
 ]

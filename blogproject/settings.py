@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'fin_blog',
     'accounts',
-    'secondaryblog',
     'django_summernote',
     'cloudinary',
     'crispy_forms',

@@ -19,6 +19,7 @@
 
 <!-- Section for Draft Posts -->
 <h3>Your Draft Posts:</h3>
+<a href="{% url 'create_post' %}" class="btn btn-primary">Create Blog</a>
 <ul>
     {% for post in posts %}
         {% if post.status == 0 %}  <!-- Check if the post is a draft -->

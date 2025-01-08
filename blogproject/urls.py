@@ -17,7 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from fin_blog import views as index_views
-from secondaryblog import views as secondaryblog_views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,10 +26,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('fin_blog/', index_views.index, name='index'),
     path("accounts/", include("allauth.urls")),
-    path(
-        'secondaryblog/', 
-        secondaryblog_views.secondaryblog_me,
-        name='secondaryblog'),
     path('summernote/', include('django_summernote.urls')),
 ]
 
