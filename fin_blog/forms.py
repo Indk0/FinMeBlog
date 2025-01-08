@@ -7,6 +7,9 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'content', 'status', 'excerpt', 'categories',
                   'featured_image']
+        widgets = {
+            'categories': forms.CheckboxSelectMultiple(),
+        }
 
 
 class CommentForm(forms.ModelForm):

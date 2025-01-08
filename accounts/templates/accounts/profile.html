@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Profile</h2>
+<h3>Your Posts:</h3>
+<ul>
+    {% for post in posts %}
+    <li>{{ post.title }} - {{ post.created_on }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Your Comments:</h3>
+<ul>
+    {% for comment in comments %}
+    <li>{{ comment.body }} on {{ comment.post.title }} - {{ comment.created_on }}</li>
+    {% endfor %}
+</ul>
+
+<h1>User Profile</h1>
+<p>This is a test profile page.</p>
+
+{% endblock %}
