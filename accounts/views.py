@@ -8,6 +8,8 @@ from fin_blog.forms import PostForm
 from fin_blog.models import Comment
 # Ensure this matches your Comment form location
 from fin_blog.forms import CommentForm
+from fin_blog.models import Category
+from fin_blog.forms import CategoryForm
 
 # Create your views here.
 
@@ -15,11 +17,15 @@ from fin_blog.forms import CommentForm
 @login_required
 def profile(request):
     user_posts = request.user.blog_posts.all()  # Accessing posts
-    user_comments = Comment.objects.filter(author=request.user)
-    # Accessing comments
+    user_comments = Comment.objects.filter(
+        author=request.user)  # Accessing comments
+    user_categories = Category.objects.filter(
+        author=request.user, approved=True)  # Filtered categories
+
     return render(request, 'accounts/profile.html', {
         'posts': user_posts,
         'comments': user_comments,
+        'categories': user_categories,  # Pass categories to the template
     })
 
 
@@ -62,5 +68,49 @@ def edit_comment(request, comment_id):
         # Preload the form with the existing comment
 
     return render(
-        request, 
+        request,
         'accounts/edit_comment.html', {'form': form, 'comment': comment})
+
+
+@login_required
+def category_list(request):
+    categories = Category.objects.all()
+    return render(request, 'accounts/category_list.html', {'categories': categories})
+
+
+@login_required
+def create_category(request):
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            category = form.save(commit=False)
+            category.author = request.user
+            category.save()
+            # Redirect to profile page after creating
+            return redirect('profile')
+    else:
+        form = CategoryForm()
+
+    return render(request, 'accounts/create_category.html', {'form': form})
+
+
+@login_required
+def edit_category(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+            return redirect('category_list')
+    else:
+        form = CategoryForm(instance=category)
+    return render(request, 'accounts/edit_category.html', {'form': form, 'category': category})
+
+
+@login_required
+def delete_category(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    if request.method == 'POST':
+        category.delete()
+        return redirect('category_list')
+    return render(request, 'accounts/delete_category.html', {'category': category})

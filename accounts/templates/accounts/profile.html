@@ -47,4 +47,18 @@
     {% endfor %}
 </ul>
 
+<!-- Section for Categories -->
+<h3>Your Categories:</h3>
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% empty %}
+        <p>You have not created any categories yet.</p>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_category' %}" class="btn btn-primary">Add Category</a>
+
+
+
 {% endblock %}
+

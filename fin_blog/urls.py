@@ -10,4 +10,10 @@ urlpatterns = [
          views.edit_comment, name='edit_comment'),
     path('comment/<int:comment_id>/delete/',
          views.delete_comment, name='delete_comment'),
+    path('categories/<int:category_id>/approve/',
+         views.approve_category, name='approve_category'),
+    path('categories/<int:category_id>/delete/',
+         views.delete_category, name='delete_category'),
+    path('admin/categories/', views.admin_category_list,
+         name='admin_category_list'),
 ]

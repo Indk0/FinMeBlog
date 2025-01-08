@@ -3,15 +3,33 @@ from .models import Post, Comment, Category, Reaction
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register models here.
-# Code for author functionality
+
+# Code for admin to approve or delete user generated categories from CRUD
 
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug", "created_at", "updated_at")
+    list_display = ("name", "slug", "approved", "created_at", "updated_at")
     prepopulated_fields = {"slug": ("name",)}
     search_fields = ("name",)
     ordering = ["name"]
+    actions = ['approve_categories', 'delete_selected_categories']
+
+    # Action to approve categories
+    def approve_categories(self, request, queryset):
+        queryset.update(approved=True)
+        self.message_user(request, "Selected categories have been approved.")
+    approve_categories.short_description = "Approve selected Categories"
+
+    # # Action to delete categories
+    # def delete_selected_categories(self, request, queryset):
+    #     count = queryset.count()
+    #     queryset.delete()
+    #     self.message_user(
+    #         request, f"{count} selected categories have been deleted.")
+    # delete_selected_categories.short_description = "Delete selected categories"
+
+# Code for author functionality
 
 
 @admin.register(Reaction)

@@ -28,8 +28,14 @@ class Reaction(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
+    approved = models.BooleanField(default=False)  # Retain approval field
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    author = models.ForeignKey(  # New field to track the creator
+        User,
+        on_delete=models.CASCADE,
+        related_name="categories"
+    )
 
     class Meta:
         ordering = ["name"]

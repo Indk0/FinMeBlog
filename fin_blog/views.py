@@ -5,6 +5,7 @@ from .forms import PostForm, CommentForm
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.messages import get_messages
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 def index(request):
@@ -130,3 +131,26 @@ def edit_post(request, slug):
     else:
         form = PostForm(instance=post)
     return render(request, 'fin_blog/edit_post.html', {'form': form})
+
+
+@staff_member_required
+def approve_category(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    category.approved = True
+    category.save()
+    messages.success(request, f"Category '{category.name}' has been approved.")
+    return redirect('admin_category_list')  # Redirect to category list
+
+
+@staff_member_required
+def delete_category(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    category.delete()
+    messages.success(request, f"Category '{category.name}' has been deleted.")
+    return redirect('admin_category_list')  # Redirect to category list
+
+
+@staff_member_required
+def admin_category_list(request):
+    unapproved_categories = Category.objects.filter(approved=False)
+    return render(request, 'admin_category_list.html', {'unapproved_categories': unapproved_categories})
