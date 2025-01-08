@@ -21,16 +21,6 @@ class CategoryAdmin(admin.ModelAdmin):
         self.message_user(request, "Selected categories have been approved.")
     approve_categories.short_description = "Approve selected Categories"
 
-    # # Action to delete categories
-    # def delete_selected_categories(self, request, queryset):
-    #     count = queryset.count()
-    #     queryset.delete()
-    #     self.message_user(
-    #         request, f"{count} selected categories have been deleted.")
-    # delete_selected_categories.short_description = "Delete selected categories"
-
-# Code for author functionality
-
 
 @admin.register(Reaction)
 class ReactionAdmin(admin.ModelAdmin):

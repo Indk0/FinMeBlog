@@ -10,6 +10,7 @@ from fin_blog.models import Comment
 from fin_blog.forms import CommentForm
 from fin_blog.models import Category
 from fin_blog.forms import CategoryForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -20,12 +21,12 @@ def profile(request):
     user_comments = Comment.objects.filter(
         author=request.user)  # Accessing comments
     user_categories = Category.objects.filter(
-        author=request.user, approved=True)  # Filtered categories
+        author=request.user)  # Include all categories
 
     return render(request, 'accounts/profile.html', {
         'posts': user_posts,
         'comments': user_comments,
-        'categories': user_categories,  # Pass categories to the template
+        'categories': user_categories,  # Pass all categories to the template
     })
 
 
@@ -86,6 +87,8 @@ def create_category(request):
             category = form.save(commit=False)
             category.author = request.user
             category.save()
+            messages.success(
+                request, "Your category has been submitted for approval.")
             # Redirect to profile page after creating
             return redirect('profile')
     else:
