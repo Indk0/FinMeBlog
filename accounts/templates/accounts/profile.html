@@ -35,6 +35,15 @@
 
 <!-- Section for Comments -->
 <h3>Your Comments:</h3>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 <ul>
     {% for comment in comments %}
         <li>
@@ -44,6 +53,7 @@
                 <span class="text-danger">(Waiting for approval from admin)</span>
             {% endif %}
             <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
+            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-sm btn-danger">Delete</a>
         </li>
     {% endfor %}
 </ul>

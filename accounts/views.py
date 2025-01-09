@@ -1,16 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-# Adjust the import based on your Post model's location
 from fin_blog.models import Post
-# Adjust this based on your Post form's location
 from fin_blog.forms import PostForm
-# Ensure this matches your Comment model location
 from fin_blog.models import Comment
-# Ensure this matches your Comment form location
 from fin_blog.forms import CommentForm
 from fin_blog.models import Category
 from fin_blog.forms import CategoryForm
 from django.contrib import messages
+from django.urls import reverse
+
 
 # Create your views here.
 
@@ -62,6 +60,8 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
+            messages.success(
+                request, "The comment has been successfully edited.")
             # Redirect back to the account/profile page after saving
             return redirect('profile')
     else:
@@ -134,7 +134,17 @@ def delete_category(request, category_id):
             messages.info(
                 request,
                 "Your deletion request has been submitted for admin approval.")
-        return redirect('category_list')
+        return redirect('profile')
     return render(
         request,
         'accounts/delete_category.html', {'category': category})
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.method == 'POST':
+        comment.delete()
+        messages.success(request, "The comment has been successfully deleted.")
+        return redirect('profile')  # Redirect to the profile page
+    return render(request, 'accounts/delete_comment.html', {'comment': comment})

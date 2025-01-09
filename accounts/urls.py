@@ -17,4 +17,6 @@ urlpatterns = [
     path('categories/<int:category_id>/delete/',
          views.delete_category, name='delete_category'),
     path('create_post/', create_post, name='create_post'),
+    path('delete-comment/<int:comment_id>/',
+         views.delete_comment, name='delete_comment'),
 ]
