@@ -58,12 +58,12 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {% if request.path == '/accounts/profile/' %}active{% endif %}" aria-current="page"
                             href="{% url 'profile' %}">Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -72,7 +72,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">Login</a>
+                            href="{% url 'account_login' %}">Sign In</a>
                     </li>
                     {% endif %}
 
@@ -85,16 +85,22 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
-        {% else %}
-        <p class="text-end m-3">You are not logged in.</p>
+        <!-- Display success/error messages -->
+        {% if messages %}
+        <div class="container mt-3">
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="alert {{ message.tags }}">
+                    {{ message }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
         {% endif %}
-
+    
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-
     </main>
 
     <!-- Footer -->

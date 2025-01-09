@@ -5,7 +5,7 @@
 
 <!-- Section for Published Posts -->
 <h3>Your Published Posts:</h3>
-{% if messages %}
+<!-- {% if messages %}
     <ul class="messages">
         {% for message in messages %}
             <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
@@ -13,7 +13,7 @@
             </li>
         {% endfor %}
     </ul>
-{% endif %}
+{% endif %} -->
 <ul>
     {% for post in posts %}
         {% if post.status == 1 %}  <!-- Check if the post is published -->

@@ -1,3 +1,4 @@
+from django.contrib import messages  # Ensure this import is present
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from fin_blog.models import Post
@@ -30,37 +31,43 @@ def profile(request):
 
 @login_required
 def edit_post(request, post_id):
-    """
-    View to edit a post.
-    """
-    post = get_object_or_404(
-        Post, id=post_id, author=request.user)  # Ensure the user owns the post
+    post = get_object_or_404(Post, id=post_id, author=request.user)
 
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            # Check if the post is a draft or published
             if post.status == 0:
                 messages.success(request, f"Draft post '{
                                  post.title}' has been updated successfully!")
             else:
                 messages.success(request, f"Published post '{
                                  post.title}' has been updated successfully!")
-            # Redirect to the profile page after saving
             return redirect('profile')
     else:
         form = PostForm(instance=post)
-    return render(
-        request, 'accounts/edit_post.html', {'form': form, 'post': post})
+
+    return render(request, 'accounts/edit_post.html', {'form': form, 'post': post})
 
 
 @login_required
 def publish_post(request, post_id):
+    """
+    View to publish a draft post.
+    """
     post = get_object_or_404(Post, id=post_id, author=request.user)
-    post.status = 1  # Assuming '1' means published
-    post.save()
-    return redirect('profile')  # Redirect back to the profile page
+
+    # Check if the post is currently a draft
+    if post.status == 0:
+        post.status = 1  # Change the status to 'published'
+        post.save()
+        messages.success(request, f"Draft post '{
+                         post.title}' has been published successfully!")
+    else:
+        messages.info(request, f"The post '{
+                      post.title}' is already published.")
+
+    return redirect('profile')  # Redirect to the profile page
 
 
 @login_required
@@ -113,39 +120,26 @@ def create_category(request):
 
 @login_required
 def edit_category(request, category_id):
-    """
-    View to edit a category.
-    """
-    category = get_object_or_404(
-        # Ensure the user owns the category
-        Category, id=category_id, author=request.user)
+    category = get_object_or_404(Category, id=category_id, author=request.user)
 
     if request.method == 'POST':
         form = CategoryForm(request.POST, instance=category)
         if form.is_valid():
             updated_category = form.save(commit=False)
 
-            if not request.user.is_staff:  # Non-admin user
+            if not request.user.is_staff:
                 updated_category.approved = False
                 messages.info(
-                    request,
-                    "Your edits have been submitted for admin approval."
-                )
+                    request, "Your edits have been submitted for admin approval.")
             else:
-                # Admin user edits directly
-                messages.success(
-                    request,
-                    f"Category '{
-                        updated_category.name}' has been updated successfully!"
-                )
+                messages.success(request, f"Category '{
+                                 updated_category.name}' has been updated successfully!")
             updated_category.save()
-            return redirect('profile')  # Redirect to profile after editing
+            return redirect('profile')
     else:
         form = CategoryForm(instance=category)
-    return render(
-        request,
-        'accounts/edit_category.html', {'form': form, 'category': category}
-    )
+
+    return render(request, 'accounts/edit_category.html', {'form': form, 'category': category})
 
 
 @login_required
