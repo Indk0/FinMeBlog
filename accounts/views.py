@@ -77,7 +77,7 @@ def edit_comment(request, comment_id):
 def category_list(request):
     categories = Category.objects.all()
     return render(
-        request, 
+        request,
         'accounts/category_list.html', {'categories': categories})
 
 
@@ -110,7 +110,7 @@ def edit_category(request, category_id):
     else:
         form = CategoryForm(instance=category)
     return render(
-        request, 
+        request,
         'accounts/edit_category.html', {'form': form, 'category': category})
 
 
@@ -121,5 +121,5 @@ def delete_category(request, category_id):
         category.delete()
         return redirect('category_list')
     return render(
-        request, 
+        request,
         'accounts/delete_category.html', {'category': category})
