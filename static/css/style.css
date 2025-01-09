@@ -352,3 +352,16 @@ ul.messages li.success {
     padding-left: 20px;
     padding-right: 20px; 
 }
+
+/* Accounts blog titles hyperlink styling */
+.post-link {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+    font-weight: bold;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+

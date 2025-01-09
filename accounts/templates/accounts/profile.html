@@ -19,7 +19,7 @@
         {% if post.status == 1 %}
         <!-- Check if the post is published -->
         <li>
-            {{ post.title }} - {{ post.created_on }}
+            <a href="{% url 'post_detail' post.slug %}" class="post-link">{{ post.title }}</a> - {{ post.created_on }}
             <!-- Delete and Edit button for published posts -->
             <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary profile-btn">Edit</a>
             <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger profile-btn delete-btn">Delete</a>
