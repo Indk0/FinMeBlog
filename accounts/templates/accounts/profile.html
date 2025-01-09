@@ -47,7 +47,7 @@
 <ul>
     {% for comment in comments %}
         <li>
-            {{ comment.body }} on {{ comment.post.get_absolute_url }} - {{ comment.post.title }}
+            {{ comment.body }} {{ comment.post.get_absolute_url }} - {{ comment.post.title }}
             {{ comment.created_on }}
             {% if not comment.approved %}
                 <span class="text-danger">(Waiting for approval from admin)</span>
