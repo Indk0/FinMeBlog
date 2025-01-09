@@ -1,4 +1,4 @@
-from django.contrib import messages 
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from fin_blog.models import Post
@@ -140,7 +140,8 @@ def edit_category(request, category_id):
         form = CategoryForm(instance=category)
 
     return render(
-        request, 'accounts/edit_category.html', {'form': form, 'category': category})
+        request,
+        'accounts/edit_category.html', {'form': form, 'category': category})
 
 
 @login_required

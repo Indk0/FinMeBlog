@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="content-wrapper">
 <h1>Delete Comment</h1>
 <p>Are you sure you want to the comment "{{ category.body }}"?</p>
 <form method="POST">
@@ -8,4 +9,5 @@
     <button type="submit" class="btn btn-danger">Delete</button>
     <a href="{% url 'profile' %}" class="btn btn-secondary">Cancel</a>
 </form>
+</div>
 {% endblock %}
