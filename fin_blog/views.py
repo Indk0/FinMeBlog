@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.messages import get_messages
 from django.contrib.admin.views.decorators import staff_member_required
+from random import shuffle
 
 
 def index(request):
@@ -13,8 +14,10 @@ def index(request):
 
 
 def post_list(request):
-    posts = Post.objects.filter(status=1).order_by('-created_on')
+    posts = list(Post.objects.filter(status=1))
+    shuffle(posts)  # Randomize order of posts
     return render(request, 'fin_blog/index.html', {'posts': posts})
+
 
 # View for displaying post details
 

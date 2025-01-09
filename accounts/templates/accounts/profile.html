@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Your Profile</h2>
-
+<div class="content-wrapper">
+<h2>Profile</h2>
 <!-- Section for Published Posts -->
-<h3>Your Published Posts:</h3>
-<!-- {% if messages %}
+    <h3>Your Published Posts:</h3>
+    <!-- {% if messages %}
     <ul class="messages">
         {% for message in messages %}
             <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
@@ -14,75 +14,79 @@
         {% endfor %}
     </ul>
 {% endif %} -->
-<ul>
-    {% for post in posts %}
-        {% if post.status == 1 %}  <!-- Check if the post is published -->
+    <ul>
+        {% for post in posts %}
+        {% if post.status == 1 %}
+        <!-- Check if the post is published -->
         <li>
             {{ post.title }} - {{ post.created_on }}
             <!-- Delete and Edit button for published posts -->
-            <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary">Edit</a>
-            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger">Delete</a>
+            <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary profile-btn">Edit</a>
+            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger profile-btn delete-btn">Delete</a>
         </li>
         {% endif %}
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 
-<!-- Section for Draft Posts -->
-<h3>Your Draft Posts:</h3>
-<a href="{% url 'create_post' %}" class="btn btn-primary">Create Blog</a>
-<ul>
-    {% for post in posts %}
-        {% if post.status == 0 %}  <!-- Check if the post is a draft -->
+    <!-- Section for Draft Posts -->
+    <h3>Your Draft Posts:</h3>
+    <a href="{% url 'create_post' %}" class="btn btn-primary">Create Blog</a>
+    <ul>
+        {% for post in posts %}
+        {% if post.status == 0 %}
+        <!-- Check if the post is a draft -->
         <li>
             {{ post.title }} - {{ post.created_on }}
             <!-- Edit and Publish buttons for draft posts -->
-            <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary">Edit</a>
+            <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary profile-btn">Edit</a>
+            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger profile-btn delete-btn">Delete</a>
             <a href="{% url 'publish_post' post.id %}" class="btn btn-sm btn-success">Publish</a>
-            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger">Delete</a>
         </li>
         {% endif %}
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 
-<!-- Section for Comments -->
-<h3>Your Comments:</h3>
-<ul>
-    {% for comment in comments %}
+    <!-- Section for Comments -->
+    <h3>Your Comments:</h3>
+    <ul>
+        {% for comment in comments %}
         <li>
             {{ comment.body }} {{ comment.post.get_absolute_url }} - {{ comment.post.title }}
             {{ comment.created_on }}
             {% if not comment.approved %}
-                <span class="text-danger">(Waiting for approval from admin)</span>
+            <span class="text-danger">(Waiting for approval from admin)</span>
             {% endif %}
-            <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
-            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-sm btn-danger">Delete</a>
+            <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-primary profile-btn">Edit</a>
+            <a href="{% url 'delete_comment' comment.id %}"
+                class="btn btn-sm btn-danger profile-btn delete-btn">Delete</a>
         </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 
-<!-- Section for Categories -->
-<h3>Your Categories:</h3>
-<ul>
-    {% for category in categories %}
-    <li>
-        {{ category.name }}
-        {% if category.approved %}
-        <span style="color: green;">(Approved)</span>
-        {% else %}
-        <span style="color: red;">(Pending Approval)</span>
-        {% endif %}
-        {% if category.pending_deletion %}
-        <span style="color: orange;">(Pending Deletion Approval)</span>
-        {% endif %}
-        <!-- Buttons -->
-        <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-primary">Edit</a>
-        <a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-danger">Delete</a>
-    </li>
-    {% empty %}
-    <li>You have not created any categories.</li>
-    {% endfor %}
-</ul>
-<a href="{% url 'create_category' %}" class="btn btn-primary">Add Category</a>
+    <!-- Section for Categories -->
+    <h3>Your Categories:</h3>
+    <ul>
+        {% for category in categories %}
+        <li>
+            {{ category.name }}
+            {% if category.approved %}
+            <span style="color: green;">(Approved)</span>
+            {% else %}
+            <span style="color: red;">(Pending Approval)</span>
+            {% endif %}
+            {% if category.pending_deletion %}
+            <span style="color: orange;">(Pending Deletion Approval)</span>
+            {% endif %}
+            <!-- Buttons -->
+            <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-primary profile-btn">Edit</a>
+            <a href="{% url 'delete_category' category.id %}"
+                class="btn btn-sm btn-danger profile-btn delete-btn">Delete</a>
+        </li>
+        {% empty %}
+        <li>You have not created any categories.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_category' %}" class="btn btn-primary">Add Category</a>
+</div>
 
 {% endblock %}
-

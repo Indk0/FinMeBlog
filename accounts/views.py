@@ -1,4 +1,4 @@
-from django.contrib import messages  # Ensure this import is present
+from django.contrib import messages 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from fin_blog.models import Post
@@ -7,7 +7,6 @@ from fin_blog.models import Comment
 from fin_blog.forms import CommentForm
 from fin_blog.models import Category
 from fin_blog.forms import CategoryForm
-from django.contrib import messages
 from django.urls import reverse
 
 
@@ -47,7 +46,8 @@ def edit_post(request, post_id):
     else:
         form = PostForm(instance=post)
 
-    return render(request, 'accounts/edit_post.html', {'form': form, 'post': post})
+    return render(
+        request, 'accounts/edit_post.html', {'form': form, 'post': post})
 
 
 @login_required
@@ -139,7 +139,8 @@ def edit_category(request, category_id):
     else:
         form = CategoryForm(instance=category)
 
-    return render(request, 'accounts/edit_category.html', {'form': form, 'category': category})
+    return render(
+        request, 'accounts/edit_category.html', {'form': form, 'category': category})
 
 
 @login_required
