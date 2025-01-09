@@ -30,17 +30,29 @@ def profile(request):
 
 @login_required
 def edit_post(request, post_id):
-    # Ensure the user owns the post
-    post = get_object_or_404(Post, id=post_id, author=request.user)
+    """
+    View to edit a post.
+    """
+    post = get_object_or_404(
+        Post, id=post_id, author=request.user)  # Ensure the user owns the post
+
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
+            # Check if the post is a draft or published
+            if post.status == 0:
+                messages.success(request, f"Draft post '{
+                                 post.title}' has been updated successfully!")
+            else:
+                messages.success(request, f"Published post '{
+                                 post.title}' has been updated successfully!")
             # Redirect to the profile page after saving
             return redirect('profile')
     else:
         form = PostForm(instance=post)
-    return render(request, 'accounts/edit_post.html', {'form': form})
+    return render(
+        request, 'accounts/edit_post.html', {'form': form, 'post': post})
 
 
 @login_required
@@ -101,23 +113,39 @@ def create_category(request):
 
 @login_required
 def edit_category(request, category_id):
-    category = get_object_or_404(Category, id=category_id)
+    """
+    View to edit a category.
+    """
+    category = get_object_or_404(
+        # Ensure the user owns the category
+        Category, id=category_id, author=request.user)
+
     if request.method == 'POST':
         form = CategoryForm(request.POST, instance=category)
         if form.is_valid():
             updated_category = form.save(commit=False)
+
             if not request.user.is_staff:  # Non-admin user
                 updated_category.approved = False
                 messages.info(
                     request,
-                    "Your edits have been submitted for admin approval.")
+                    "Your edits have been submitted for admin approval."
+                )
+            else:
+                # Admin user edits directly
+                messages.success(
+                    request,
+                    f"Category '{
+                        updated_category.name}' has been updated successfully!"
+                )
             updated_category.save()
-            return redirect('category_list')
+            return redirect('profile')  # Redirect to profile after editing
     else:
         form = CategoryForm(instance=category)
     return render(
         request,
-        'accounts/edit_category.html', {'form': form, 'category': category})
+        'accounts/edit_category.html', {'form': form, 'category': category}
+    )
 
 
 @login_required
@@ -147,4 +175,33 @@ def delete_comment(request, comment_id):
         comment.delete()
         messages.success(request, "The comment has been successfully deleted.")
         return redirect('profile')  # Redirect to the profile page
-    return render(request, 'accounts/delete_comment.html', {'comment': comment})
+    return render(
+        request, 'accounts/delete_comment.html', {'comment': comment})
+
+
+@login_required
+def delete_post(request, post_id):
+    """
+    View to delete a post (draft or published).
+    """
+    post = get_object_or_404(Post, id=post_id, author=request.user)
+
+    if request.method == "POST":
+        is_draft = post.status == 0  # Check if the post is a draft
+        deleted_post_title = post.title  # Store the title for feedback
+        post_id = post.id  # Store post ID
+        post.delete()
+
+        if is_draft:
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                f"Draft post '{deleted_post_title}' deleted successfully!",
+                extra_tags=f"draft_{post_id}"
+            )
+        else:
+            messages.success(request, f"Published post '{
+                             deleted_post_title}' deleted successfully!")
+        return redirect('profile')
+
+    return render(request, 'accounts/delete_post.html', {'post': post})

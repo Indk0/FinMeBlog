@@ -5,13 +5,23 @@
 
 <!-- Section for Published Posts -->
 <h3>Your Published Posts:</h3>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 <ul>
     {% for post in posts %}
         {% if post.status == 1 %}  <!-- Check if the post is published -->
         <li>
             {{ post.title }} - {{ post.created_on }}
-            <!-- Optional: Add an Edit button for published posts -->
+            <!-- Delete and Edit button for published posts -->
             <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary">Edit</a>
+            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger">Delete</a>
         </li>
         {% endif %}
     {% endfor %}
@@ -25,9 +35,10 @@
         {% if post.status == 0 %}  <!-- Check if the post is a draft -->
         <li>
             {{ post.title }} - {{ post.created_on }}
-            <!-- Add Edit and Publish buttons for draft posts -->
+            <!-- Edit and Publish buttons for draft posts -->
             <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-primary">Edit</a>
             <a href="{% url 'publish_post' post.id %}" class="btn btn-sm btn-success">Publish</a>
+            <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-danger">Delete</a>
         </li>
         {% endif %}
     {% endfor %}
@@ -35,15 +46,6 @@
 
 <!-- Section for Comments -->
 <h3>Your Comments:</h3>
-{% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
-                {{ message }}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
 <ul>
     {% for comment in comments %}
         <li>
