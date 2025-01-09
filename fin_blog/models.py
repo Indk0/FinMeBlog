@@ -32,6 +32,7 @@ class Category(models.Model):
     approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    pending_deletion = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["name"]

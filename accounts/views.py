@@ -105,7 +105,13 @@ def edit_category(request, category_id):
     if request.method == 'POST':
         form = CategoryForm(request.POST, instance=category)
         if form.is_valid():
-            form.save()
+            updated_category = form.save(commit=False)
+            if not request.user.is_staff:  # Non-admin user
+                updated_category.approved = False
+                messages.info(
+                    request,
+                    "Your edits have been submitted for admin approval.")
+            updated_category.save()
             return redirect('category_list')
     else:
         form = CategoryForm(instance=category)
@@ -118,7 +124,16 @@ def edit_category(request, category_id):
 def delete_category(request, category_id):
     category = get_object_or_404(Category, id=category_id)
     if request.method == 'POST':
-        category.delete()
+        if request.user.is_staff:  # Admin can delete directly
+            category.delete()
+            messages.success(request, "Category deleted successfully.")
+        else:
+            category.pending_deletion = True
+            category.approved = False
+            category.save()
+            messages.info(
+                request,
+                "Your deletion request has been submitted for admin approval.")
         return redirect('category_list')
     return render(
         request,

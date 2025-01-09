@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from fin_blog.views import create_post
 
+
 urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('post/<int:post_id>/edit/', views.edit_post, name='edit_post'),

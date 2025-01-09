@@ -59,11 +59,18 @@
         {% else %}
         <span style="color: red;">(Pending Approval)</span>
         {% endif %}
+        {% if category.pending_deletion %}
+        <span style="color: orange;">(Pending Deletion Approval)</span>
+        {% endif %}
+        <!-- Buttons -->
+        <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-primary">Edit</a>
+        <a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-danger">Delete</a>
     </li>
     {% empty %}
     <li>You have not created any categories.</li>
     {% endfor %}
 </ul>
 <a href="{% url 'create_category' %}" class="btn btn-primary">Add Category</a>
+
 {% endblock %}
 
