@@ -231,3 +231,136 @@ body {
         font-size: 0.9rem; 
     }
 }
+
+/* Comment message styling */
+
+ul.messages {
+    list-style: none;
+    padding: 0;
+}
+
+ul.messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+ul.messages li.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Draft post message */
+.alert {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.alert.draft {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Grid Home Page Styling */
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #E84610;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #445261;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Regular Post Styling */
+.col-md-4 .card-img-top {
+    height: 200px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Accounts button styling */
+
+.btn-primary {
+    display: inline-block;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.profile-btn {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background-color: #E74C3C; /* Bright red */
+    color: white;
+    border-radius: 5px; /* Rounds the corners */
+    padding: .25rem .5rem; /* Consistent padding */
+    margin-right: 10px; /* Space between buttons */
+}
+
+.delete-btn:hover {
+    background-color: #C0392B; /* Darker red on hover */
+    color: #fff;
+}
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.content-wrapper {
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+/* Accounts blog titles hyperlink styling */
+.post-link {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+    font-weight: bold;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}

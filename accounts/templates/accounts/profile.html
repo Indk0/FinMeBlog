@@ -5,15 +5,6 @@
 <h2>Profile</h2>
 <!-- Section for Published Posts -->
     <h3>Your Published Posts:</h3>
-    <!-- {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li class="{% if message.tags %}{{ message.tags }}{% endif %}">
-                {{ message }}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %} -->
     <ul>
         {% for post in posts %}
         {% if post.status == 1 %}
