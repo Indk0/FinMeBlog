@@ -83,7 +83,7 @@
 * Sprint 3: Admin - At this stage my goal will be to improve the admin panel UX and add fixture data to test my blog.
 * Sprint 4: Templates and Functionality - This is the stage where html and css templates will be created for the various pages my blog will host, the functionality code will be a mixture of could and should have user stories. these codes will make the blog better in terms of UX. 
 * Sprint 5: Auth and Cloudinary - This is the final stage of my MVP, at this stage I will create a signup page using the package AllAuth and connect Cloudinary for image upload.
-* Sprint 6: Blog Styling/Extras-
+* Sprint 6: Blog Styling/Extras- This final stage will involve me focusing on styling the site this includes: making my site look like the wireframe, add branding, colours, favicon and other features that will make my blog unique. At this stage there will be more could have and future considerations depending on how much time I have left until submission.
 
 ## MVP (Minimal Viable Product)
 ### I complete my MVP with the minimal amount of user/developer stories closed. My MVP, as seen in the image below, shows all of the acceptance criteria ticked, the MVP allows users to read and comment on any blog once registered and logged in. In this case the admin has majority of the features accessable as the admin can create and edit blogs, categories, comments, manipulate user and accounts all from the admin panel. 
@@ -93,7 +93,25 @@
 ### The MVP blog site has some downsides if used as a product, users will not be able to create blogs as authors this is due to the lack of an account functionality where the author (user) can track the blogs and comments posted in the site. Another downside for the MVP is there's no image upload feature for the author and tha admin, this will significantly impact the user experience as images can help to set the tone for the blog.
 
 ## Design
-### Colour Pallets
+### Colour Palletes
+#### Since my inspiration for this project is Yahoo Finance, I decided to follow a similar pathway when it came to adding colours to my blog, Yahoo Finance at most has 5 colours being used on the site, this could be done for a better readability for the users which will contribute to positive UX. Therefore I used as minimal colours as possible for my site:
+![Colour Pallet 1](./readmemedia/screenshots/Colour%20pallete%201.png)
+![Colour Pallet 2](./readmemedia/screenshots/Colour%20pallete%202.png)
+#### Above are the two colour pallete I chose to implement for my site, out of the colours above the two pallates used were:
+
+#### #40916C - I chose this shade of green as this colour is the most associated with money, this colour is used for the branding colour, favicon and the thin border that is present on every blog card on the main page.
+#### #003566 - This colour was used for the title background on the blog pages, this colour was chosen as random as the default grey colour looked slightly out of place.
+#### #F9FAFC - This is the default background colour that is on across all sites, this colour is pleasent to the eye if users don't spend too much time reading blogs.
+
+### Accounts section colours
+#### These were the other colours used for the styling of the accounts page:
+#### #007bff - This blue colour is used for all of the edit, save changes, create blog and category buttons.
+#### #E74C3C - This colour is used for the delete button, delete buttons on many sites are red to sign a warning to the user.
+#### #198754 - This is the only button colour that stands out from the rest as it's green, used for the publish button.
+#### #dc3545, #008000, #0056b3 - These colours are used for the messages that are displayed to the user, the red and the green is used to for feedback to the user and the blue colour is used to highlight the blog titles as they are hyperlinked.
+#### #155724, #d4edda - These colours are used for the messages that is displayed when the user either edit, delete, creates or published a blog or a category. These colours have no correlation between the main aspect of the branding, as it's primarily used to get the attention of the user after they completed an action.
+#### #6c757d - Finally this is the colour used for the cancel button
+
 ### Font
 
 ## Technologies
