@@ -172,5 +172,3 @@ def category_posts(request, slug):
         'category': category,
         'posts': posts
     })
-
-

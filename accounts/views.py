@@ -130,10 +130,12 @@ def edit_category(request, category_id):
             if not request.user.is_staff:
                 updated_category.approved = False
                 messages.info(
-                    request, "Your edits have been submitted for admin approval.")
+                    request, 
+                    "Your edits have been submitted for admin approval.")
             else:
                 messages.success(request, f"Category '{
-                                 updated_category.name}' has been updated successfully!")
+                                 updated_category.name}
+                                 ' has been updated successfully!")
             updated_category.save()
             return redirect('profile')
     else:
