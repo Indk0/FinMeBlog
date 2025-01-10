@@ -30,11 +30,6 @@ body {
     background-color: #F9FAFC;
 }
 
-.card {
-    border: none;
-    background-color: transparent;
-}
-
 .image-container {
     position: relative;
 }
@@ -268,12 +263,7 @@ ul.messages li.success {
 
 .card {
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
+    background-color: transparent;
 }
 
 .card-img-top {
