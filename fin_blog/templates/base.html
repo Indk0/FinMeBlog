@@ -27,6 +27,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/readmemedia/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/readmemedia/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/readmemedia/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/readmemedia/favicon/site.webmanifest">
+
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -34,8 +40,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">FinMe</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,19 +52,21 @@
                             href="{% url 'home'%}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
                             {% for category in categories %}
-                            <li><a class="dropdown-item" href="{% url 'category_posts' slug=category.slug %}">{{ category.name }}</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{% url 'category_posts' slug=category.slug %}">{{ category.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/accounts/profile/' %}active{% endif %}" aria-current="page"
-                            href="{% url 'profile' %}">Account</a>
+                        <a class="nav-link {% if request.path == '/accounts/profile/' %}active{% endif %}"
+                            aria-current="page" href="{% url 'profile' %}">Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
@@ -97,7 +104,7 @@
             </ul>
         </div>
         {% endif %}
-    
+
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}

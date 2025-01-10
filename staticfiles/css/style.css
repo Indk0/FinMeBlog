@@ -7,7 +7,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #40916C;
 }
 
 .red-o {
@@ -65,7 +65,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #003566;
     color: white;
     position: relative;
 }
@@ -269,7 +269,7 @@ ul.messages li.success {
 .card-img-top {
     height: 300px;
     object-fit: cover;
-    border-bottom: 2px solid #E84610;
+    border-bottom: 4px solid #40916C;
 }
 
 .card-title {
@@ -353,4 +353,8 @@ ul.messages li.success {
 .post-link:hover {
     text-decoration: underline;
     color: #0056b3; /* Darker blue on hover */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #40916C
 }
