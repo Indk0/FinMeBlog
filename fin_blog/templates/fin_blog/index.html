@@ -6,9 +6,41 @@
 <div class="container">
     <div class="row mb-4">
         <!-- Featured Blog Post -->
-        {% with posts|slice:":1" as featured_post %}
-        {% for post in featured_post %}
-        <div class="col-12 mb-3">
+        {% with posts|slice:":1" as upper_left_post %}
+        {% for post in upper_left_post %}
+        <div class="col-12 col-lg-4 mb-3">
+            <div class="card">
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                    </a>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                    <p class="card-text text-muted h6">{{ post.created_on }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endwith %}
+        <div class="col-12 col-lg-4">
+            {% with posts|slice:"1:4" as upper_centre_posts %}
+                {% for post in upper_centre_posts %}
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid d-lg-none">
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                        </a>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <p class="card-text text-muted h6 d-lg-none">{{ post.created_on }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+        {% with posts|slice:"4:5" as upper_right_post %}
+        {% for post in upper_right_post %}
+        <div class="col-12 col-lg-4">
             <div class="card">
                 <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
                 <div class="card-body">
@@ -26,7 +58,7 @@
 
     <!-- Grid Layout for Other Blog Posts -->
     <div class="row">
-        {% with posts|slice:"1:" as other_posts %}
+        {% with posts|slice:"5:" as other_posts %}
         {% for post in other_posts %}
         <div class="col-md-4 mb-4">
             <div class="card h-100">
