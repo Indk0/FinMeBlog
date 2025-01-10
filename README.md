@@ -109,8 +109,10 @@
 #### #E74C3C - This colour is used for the delete button, delete buttons on many sites are red to sign a warning to the user.
 #### #198754 - This is the only button colour that stands out from the rest as it's green, used for the publish button.
 #### #dc3545, #008000, #0056b3 - These colours are used for the messages that are displayed to the user, the red and the green is used to for feedback to the user and the blue colour is used to highlight the blog titles as they are hyperlinked.
-#### #155724, #d4edda - These colours are used for the messages that is displayed when the user either edit, delete, creates or published a blog or a category. These colours have no correlation between the main aspect of the branding, as it's primarily used to get the attention of the user after they completed an action.
-#### #6c757d - Finally this is the colour used for the cancel button
+#### #155724, #d4edda - These colours are used for the messages that is displayed when the user either edits, deletes, sign in/out, registers, creates or published a blog or a category. These colours have no correlation between the main aspect of the branding, as it's primarily used to get the attention of the user after they completed an action.
+#### #188181 - This colour is used for the register, sign in and sign out button.
+#### #6c757d - Finally this is the colour used for the cancel button.
+
 
 ### Font
 
