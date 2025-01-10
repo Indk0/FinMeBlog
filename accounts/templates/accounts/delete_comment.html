@@ -3,7 +3,7 @@
 {% block content %}
 <div class="content-wrapper">
 <h1>Delete Comment</h1>
-<p>Are you sure you want to the comment "{{ category.body }}"?</p>
+<p>Are you sure you want to the comment "{{ comment.body }}"?</p>
 <form method="POST">
     {% csrf_token %}
     <button type="submit" class="btn btn-danger">Delete</button>
