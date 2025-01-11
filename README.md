@@ -205,7 +205,7 @@ Collect all static files into the configured directory to prepare them for deplo
 #### The errors from crucial files like settings and env.py, were not solved as manipulating these codes will affect the whole project code, creating simple errors that wouldn't be there in the first place.
 
 ### Bug/Errors/Warnings Fixes
-#### Overall there have been no bugs/errors/warnings that needed to be fixed.
+#### Overall there have been bugs/errors/warnings that came up during validation however, they will not affect the site functionality, even when deployed to Heroku.
 
 ## Accessibility testing
 
