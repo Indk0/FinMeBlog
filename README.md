@@ -60,8 +60,8 @@
 #### The ERD Diagram was made using a tool called Lucidchart.
 [ERD Diagram](./readmemedia/ERD/FinMe%20ERD.pdf)
 #### A change was made to the database
-### Security
 
+### Security
 ## Project Management
 ### Agile Methodologies
 #### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
@@ -148,7 +148,9 @@
 
 ## Deployment
 ### GitHub Deployment
+#### GitHub will be used to host the code of my blog site, this is where the ReadMe will be hosted and the Kanban  board along with the user epics, developer and user stories.
 ### Deploying with Heroku
+#### Through out creating the project, Heroku was used to deploy the pushed version of my website, this was done to test for bugs that may occur during the deployment to Heroku. Heroku will also be used to deploy the final version of my site once it has been tested for errors.
 
 ## Testing
 ### Validation
