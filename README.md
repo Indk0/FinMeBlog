@@ -148,9 +148,10 @@
 
 ## Deployment
 ### GitHub Deployment
-#### GitHub will be used to host the code of my blog site, this is where the ReadMe will be hosted and the Kanban  board along with the user epics, developer and user stories.
+#### GitHub will be used to host the code of my blog site, this is where the ReadMe will be hosted and the Kanban board along with the user epics, developer and user stories.
 ### Deploying with Heroku
 #### Through out creating the project, Heroku was used to deploy the pushed version of my website, this was done to test for bugs that may occur during the deployment to Heroku. Heroku will also be used to deploy the final version of my site once it has been tested for errors.
+[Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
 
 ## Testing
 ### Validation
