@@ -141,12 +141,38 @@
 - GitHub - GitHub was used for version control and hosting the project's code.
 - Git - Git was employed to track changes in the project's code and manage version history.
 - Heroku - Heroku is utilised to deploy the application, providing a cloud platform for hosting and running the project seamlessly.
-- Balsamiq - Balsamiq is used for designing wireframes and creating visual representations of the site user interface.
+- Balsamiq - Balsamiq was used for designing wireframes and creating visual representations of the site user interface.
 - YouTube - YouTube was used to find solutions to troubleshoot code.
 - Stack Overflow - Stack Overflow was used to find coding solutions for troubleshooting. 
 - Chat GPT - Chat GPT was used to save time and effort on repetitative tasks such as debuging, creating blog content for the site.
+- Unsplash - Unslash was used to find license free images for my blog.
 
 ## Deployment
+### Pre-deployment:
+1. Update requirements.txt: Ensure that the requirements.txt file is updated to include all the required Python modules for your project. To do this, generate a fresh requirements.txt file that lists all installed packages in your virtual environment.
+
+2. Create a Procfile: Add a file named Procfile to the root directory of your project. This file is necessary for Heroku to understand how to run your application.
+The file should include a line that specifies your application as a Gunicorn web app. For example:
+web: gunicorn your_project_name.wsgi
+Replace your_project_name with the name of your Django project.
+
+3. Update ALLOWED_HOSTS in settings.py: Modify the ALLOWED_HOSTS setting in the settings.py file of your Django project. Add your Heroku app's domain and localhost to the list.
+Example:
+ALLOWED_HOSTS = ['project-app-name.herokuapp.com', 'localhost']
+
+4. Configure Environment Variables: Sensitive data, such as the database URL, cloud storage URL, and the secret key, should be stored in a .env file.
+The .env file must be ignored in Git by adding it to the .gitignore file.
+Example of .env file content:
+DATABASE_URL=your_database_url
+CLOUDINARY_URL=your_cloudinary_url
+SECRET_KEY=your_secret_key
+Once the .env file is configured, these variables must be added to Heroku manually via the "Config Vars" section in the Heroku dashboard.
+
+5. Prepare for Static Files Management: Ensure that your static files are configured properly for deployment. For example:
+In settings.py, set STATIC_ROOT to point to a folder for static files in your project.
+Example: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+Collect all static files into the configured directory to prepare them for deployment.
+
 ### GitHub Deployment
 #### GitHub will be used to host the code of my blog site, this is where the ReadMe will be hosted and the Kanban board along with the user epics, developer and user stories.
 ### Deploying with Heroku
@@ -174,6 +200,8 @@
 [Flake8 error](./readmemedia/screenshots/Flake8errorflag.png)
 #### This error will remain unsolved as it doesn't affect the overall blog site function.
 
+### JS Validation
+
 #### The errors from crucial files like settings and env.py, were not solved as manipulating these codes will affect the whole project code, creating simple errors that wouldn't be there in the first place.
 
 ### Bug/Errors/Warnings Fixes
@@ -183,6 +211,7 @@
 
 
 ## Future Features
+#### talk about how the wireframes will be taken priority when updating the website in the future.
 
 ## Credits
 
