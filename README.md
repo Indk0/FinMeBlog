@@ -174,6 +174,8 @@
 [Flake8 error](./readmemedia/screenshots/Flake8errorflag.png)
 #### This error will remain unsolved as it doesn't affect the overall blog site function.
 
+#### The errors from crucial files like settings and env.py, were not solved as manipulating these codes will affect the whole project code, creating simple errors that wouldn't be there in the first place.
+
 ### Bug/Errors/Warnings Fixes
 #### Overall there have been no bugs/errors/warnings that needed to be fixed.
 
