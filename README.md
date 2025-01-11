@@ -138,13 +138,13 @@
 - PostgreSQL - This tool from Code Institute provided the database URL for this project.
 
 ### Other tools used
-- GitHub - GitHub is used for version control and collaboration, hosting the project's codebase and facilitating team contributions.
-- Git - Git is employed to track changes in the project's code and manage version history efficiently.
+- GitHub - GitHub was used for version control and hosting the project's code.
+- Git - Git was employed to track changes in the project's code and manage version history.
 - Heroku - Heroku is utilised to deploy the application, providing a cloud platform for hosting and running the project seamlessly.
-- Balsamiq - Balsamiq is used for designing wireframes and creating visual representations of the application's user interface.
-- YouTube - YouTube serves as a learning resource for tutorials and guidance throughout the project's development process.
+- Balsamiq - Balsamiq is used for designing wireframes and creating visual representations of the site user interface.
+- YouTube - YouTube was used to find solutions to troubleshoot code.
 - Stack Overflow - Stack Overflow was used to find coding solutions for troubleshooting. 
-- Chat GPT - Chat GPT was used to assign with repetitative tasks such as debuging.
+- Chat GPT - Chat GPT was used to save time and effort on repetitative tasks such as debuging, creating blog content for the site.
 
 ## Deployment
 ### GitHub Deployment
