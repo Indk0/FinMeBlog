@@ -125,18 +125,35 @@
 ## Technologies
 
 ### Languages/Frameworks
+- Python - Python serves as the core programming language for this project, providing robust and efficient backend logic.
+- Django - Django is used as the primary web framework to build a secure and scalable backend for the project.
+- HTML - HTML is utilised to structure the web pages and define the content layout of the project sites.
+- CSS - CSS is implemented to style the web pages, ensuring a visually appealing and user-friendly interface.
+- Bootstrap 5 - Bootstrap 5 is used to create a responsive and modern design with minimal custom CSS requirements.
+- JavaScript - JavaScript added dynamic functionality and enhances the interactivity of the web application.
+- Whitenoise - Whitenoise is integrated to handle static files efficiently, ensuring fast and reliable delivery in production.
+- Cloudinary - Cloudinary is used for storing and managing media files, offering easy integration with Django for seamless uploads and retrieval.
+- Crispy Forms - Crispy Forms enhances the appearance and usability of forms, enabling easy customisation and responsive designs.
 
 ### Database
+- PostgreSQL - This tool from Code Institute provided the database URL for this project.
 
 ### Other tools used
+- GitHub - GitHub is used for version control and collaboration, hosting the project's codebase and facilitating team contributions.
+- Git - Git is employed to track changes in the project's code and manage version history efficiently.
+- Heroku - Heroku is utilised to deploy the application, providing a cloud platform for hosting and running the project seamlessly.
+- Balsamiq - Balsamiq is used for designing wireframes and creating visual representations of the application's user interface.
+- YouTube - YouTube serves as a learning resource for tutorials and guidance throughout the project's development process.
+- Stack Overflow - Stack Overflow was used to find coding solutions for troubleshooting. 
+- Chat GPT - Chat GPT was used to assign with repetitative tasks such as debuging.
 
-#### 
 ### Deployment
 ## GitHub Deployment
 ## Deploying with Heroku
 
 ## Testing
 ### Validation
+### Bug/Errors/Warnings Fixes
 ### Accessibility
 ### Manual Testing
 
