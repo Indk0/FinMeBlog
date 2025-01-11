@@ -22,7 +22,7 @@
 - [Design](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
   - [Colour Pallets](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#colour-pallets)
   - [Font](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#font)
-  - [Favicon]()
+  - [Favicon](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#favicon)
 - [Technologies](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
   - [Languages/Frameworks](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#languagesframeworks)
   - [Database](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#database)
