@@ -28,7 +28,7 @@
   - [Database](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#database)
   - [Other tools](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#other-tools)
   - [Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deployment)
-- [GitHub Deploymetn](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#github-deployment)
+- [GitHub Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#github-deployment)
 - [Deploying with Heroku](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deploying-with-heroku)
 - [Testing](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#testing)
 - [Future Features](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#testing)
@@ -61,7 +61,6 @@
 [ERD Diagram](./readmemedia/ERD/FinMe%20ERD.pdf)
 #### A change was made to the database
 ### Security
-
 
 ## Project Management
 ### Agile Methodologies
@@ -147,9 +146,9 @@
 - Stack Overflow - Stack Overflow was used to find coding solutions for troubleshooting. 
 - Chat GPT - Chat GPT was used to assign with repetitative tasks such as debuging.
 
-### Deployment
-## GitHub Deployment
-## Deploying with Heroku
+## Deployment
+### GitHub Deployment
+### Deploying with Heroku
 
 ## Testing
 ### Validation
