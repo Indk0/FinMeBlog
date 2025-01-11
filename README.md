@@ -22,6 +22,7 @@
 - [Design](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
   - [Colour Pallets](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#colour-pallets)
   - [Font](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#font)
+  - [Favicon]()
 - [Technologies](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
   - [Languages/Frameworks](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#languagesframeworks)
   - [Database](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#database)
@@ -113,13 +114,22 @@
 #### #188181 - This colour is used for the register, sign in and sign out button.
 #### #6c757d - Finally this is the colour used for the cancel button.
 
-
 ### Font
+#### The site had default fonts of Robot and Lato, which are taken from Google Fonts.
+### Favicon
+#### To get the favicon for my site, I used the site:
+[Favicon Generator](https://favicon.io/)
+
+#### The design of the favicon is simple, it is the first initial of the website name coloured in #40916C with a white background to make it stand out. The font of the favicon is Hind which closely matches the website font.
 
 ## Technologies
+
 ### Languages/Frameworks
+
 ### Database
+
 ### Other tools used
+
 #### 
 ### Deployment
 ## GitHub Deployment
