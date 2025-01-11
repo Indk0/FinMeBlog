@@ -154,10 +154,31 @@
 [Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
 
 ## Testing
-### Validation
-### Bug/Errors/Warnings Fixes
-### Accessibility
 ### Manual Testing
+### Performance testing
+## Validation
+### HTML Validation
+#### After using the HTML validator, many of the HTML had almost the exact same errors and warnings however, I decided to not fix them as they didn't hinder the functionality of my blog site.
+#### HTML validator used: [HTML Validator](https://validator.w3.org/nu/)
+
+#### This is an example of the errors and warnings that were present in the most of the HTML files.
+[Example of errors and warnings](./readmemedia/screenshots/HTML%20Validator%20example.png)
+
+### CSS Validation
+#### There were no errors or warnings found in the CSS file.
+#### CSS Validator used: [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+[Screenshot of CSS validator results](./readmemedia/screenshots/CSS%20Validator.png)
+
+### Python Validation
+#### The Python validators used were Flake8 and autopep8, these were extensions installed within the repository, so far only one file has an error which Flake8 has flagged line 71 and 69, in the post_detail.html file.
+[Flake8 error](./readmemedia/screenshots/Flake8errorflag.png)
+#### This error will remain unsolved as it doesn't affect the overall blog site function.
+
+### Bug/Errors/Warnings Fixes
+#### Overall there have been no bugs/errors/warnings that needed to be fixed.
+
+## Accessibility testing
+
 
 ## Future Features
 
