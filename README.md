@@ -226,6 +226,7 @@ Collect all static files into the configured directory to prepare them for deplo
 
 ## Site Performance Testing
 #### To test my website for mobile and desktop compatibility I used the site [PageSpeed Insights](https://pagespeed.web.dev/). This site tester is very versitile in providing detailed diagnostics.
+
 [Mobile Results 1](./readmemedia/screenshots/Desktop/Testresult1.png)
 
 [Mobile Results 2](./readmemedia/screenshots/Mobile/Testresult2.png)
@@ -269,3 +270,7 @@ Users can submit replies to existing comments, creating a threaded discussion.
 #### Note - These features are listed as unticked acceptance criterias or incomplete developer/users tories with the label future consideration in different Kanban boards. 
 
 ## Acknowledgements
+#### I would like to say thank you to everyone that has supported my learning during the project and my time at Code Institute.
+#### I want to say thank you to Paul, Vasi and Shelly for providing guidance as facilitors.
+#### A big thank you John, Kevin and Ruu for helping me get through coding issues.
+#### Finally a big thank you to my cohort for being great company.
