@@ -79,6 +79,8 @@
 #### Username: finblog
 #### Password: Qwerty12.
 
+#### The final deployment of this project has the DEBUG mode set to False to protect sensitive files and information.
+
 ## Project Management
 ### Agile Methodologies
 #### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
