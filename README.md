@@ -198,8 +198,27 @@ Collect all static files into the configured directory to prepare them for deplo
 #### Through out creating the project, Heroku was used to deploy the pushed version of my website, this was done to test for bugs that may occur during the deployment to Heroku. Heroku will also be used to deploy the final version of my site once it has been tested for errors.
 [Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
 
-## Testing
-### Manual Testing
+# Testing
+## Manual Testing
+### Home Page
+#### The home works as designed.
+### Blogs
+#### All blog pages work as designed, including the comment sections.
+### Categories Pages
+#### Each individual category pages work as designed.
+### Accounts Page/Functionality
+#### The page itself works as designed including all of the functionality to create, edit and delete certain blog features like draft posts or comments. 
+### Sign in/out Pages
+#### Both pages work as intended.
+### Register Page
+#### The register page works as designed, including the password messages.
+### Admin Page
+#### The admin page works as designed.
+### Navigations
+#### All of the navigation work as intended, the dropdown menu works on all pages.
+### Messages
+#### All of the message feedback for the user work as designed.
+
 ## Validation
 ### HTML Validation
 #### After using the HTML validator, many of the HTML had almost the exact same errors and warnings however, I decided to not fix them as they didn't hinder the functionality of my blog site.
