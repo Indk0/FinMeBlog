@@ -10,7 +10,7 @@ from fin_blog.forms import CategoryForm
 from django.urls import reverse
 
 
-# Create your views here.
+# Display user profile with posts, comments, and categories
 
 
 @login_required
@@ -19,7 +19,7 @@ def profile(request):
     user_comments = Comment.objects.filter(
         author=request.user)  # Accessing comments
     user_categories = Category.objects.filter(
-        author=request.user)  # Include all categories
+        author=request.user)  # Access user's categories
 
     return render(request, 'accounts/profile.html', {
         'posts': user_posts,
@@ -28,6 +28,7 @@ def profile(request):
     })
 
 
+# Allow logged-in users to edit their posts
 @login_required
 def edit_post(request, post_id):
     post = get_object_or_404(Post, id=post_id, author=request.user)
@@ -50,6 +51,7 @@ def edit_post(request, post_id):
         request, 'accounts/edit_post.html', {'form': form, 'post': post})
 
 
+# Publish a draft post
 @login_required
 def publish_post(request, post_id):
     """
@@ -58,8 +60,8 @@ def publish_post(request, post_id):
     post = get_object_or_404(Post, id=post_id, author=request.user)
 
     # Check if the post is currently a draft
-    if post.status == 0:
-        post.status = 1  # Change the status to 'published'
+    if post.status == 0:  # Check if the post is a draft
+        post.status = 1  # Set status to published
         post.save()
         messages.success(request, f"Draft post '{
                          post.title}' has been published successfully!")
@@ -70,6 +72,7 @@ def publish_post(request, post_id):
     return redirect('profile')  # Redirect to the profile page
 
 
+# Allow logged-in users to edit their comments
 @login_required
 def edit_comment(request, comment_id):
     # Ensure the user owns the comment
@@ -92,6 +95,7 @@ def edit_comment(request, comment_id):
         'accounts/edit_comment.html', {'form': form, 'comment': comment})
 
 
+# Display all categories
 @login_required
 def category_list(request):
     categories = Category.objects.all()
@@ -100,6 +104,7 @@ def category_list(request):
         'accounts/category_list.html', {'categories': categories})
 
 
+# Allow logged-in users to create new categories
 @login_required
 def create_category(request):
     if request.method == 'POST':
@@ -118,6 +123,7 @@ def create_category(request):
     return render(request, 'accounts/create_category.html', {'form': form})
 
 
+# Allow logged-in users to edit their categories
 @login_required
 def edit_category(request, category_id):
     category = get_object_or_404(Category, id=category_id, author=request.user)
@@ -145,6 +151,7 @@ def edit_category(request, category_id):
         'accounts/edit_category.html', {'form': form, 'category': category})
 
 
+# Allow logged-in users to delete their categories
 @login_required
 def delete_category(request, category_id):
     category = get_object_or_404(Category, id=category_id)
@@ -165,6 +172,7 @@ def delete_category(request, category_id):
         'accounts/delete_category.html', {'category': category})
 
 
+# Allow logged-in users to delete their comments
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -176,6 +184,7 @@ def delete_comment(request, comment_id):
         request, 'accounts/delete_comment.html', {'comment': comment})
 
 
+# Allow logged-in users to delete their posts
 @login_required
 def delete_post(request, post_id):
     """
