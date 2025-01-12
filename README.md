@@ -75,7 +75,10 @@
 #### Throught the project many changes were made to the models to accomodate features for the blog, for example the category model now has an author entity which is used to determine whether the author(user) has created a category field as part of the custom CRUD functionality coded for this project.
 
 ### Security
-*CSRF protection for form submissions.
+#### Superuser log in details, use for testing purposes only! A normal user credentials can be created by registering on the website.
+#### Username: finblog
+#### Password: Qwerty12.
+
 ## Project Management
 ### Agile Methodologies
 #### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
