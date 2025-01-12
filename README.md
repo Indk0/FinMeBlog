@@ -214,12 +214,27 @@ Collect all static files into the configured directory to prepare them for deplo
 ### Bug/Errors/Warnings Fixes
 #### Overall there have been bugs/errors/warnings that came up during validation however, they will not affect the site functionality, even when deployed to Heroku.
 
-## Accessibility testing
+## Site testing
+#### To test my website for mobile and desktop compatibility I used the site [PageSpeed Insights](https://pagespeed.web.dev/). This site tester is very versitile in providing detailed diagnostics.
+[Mobile Results 1](./readmemedia/screenshots/Desktop/Testresult1.png)
 
+[Mobile Results 2](./readmemedia/screenshots/Mobile/Testresult2.png)
 
-## Future Features
-#### talk about how the wireframes will be taken priority when updating the website in the future.
+[Mobile Results 3](./readmemedia/screenshots/Mobile/Testresult3.png)
 
-## Credits
+[Mobile Results 4](./readmemedia/screenshots/Mobile/Testresult4.png)
+
+[Desktop Results 1](./readmemedia/screenshots/Desktop/Testresult1.png)
+
+[Desktop Results 2](./readmemedia/screenshots/Desktop/Testresult2.png)
+
+[Desktop Results 3](./readmemedia/screenshots/Desktop/Testresult3.png)
+
+[Desktop Results 4](./readmemedia/screenshots/Desktop/Testresult4.png)
+
+## Fixes After Site Testing
+
+## Future Features/Considerations
+#### At the beginning of this project, I followed the MoSCoW prioritisation method, instead of making a Won't Have label I decided it's best to make a Future Consideration label as many apps and website constantly evolve. 
 
 ## Acknowledgements
