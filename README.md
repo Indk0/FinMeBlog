@@ -181,7 +181,6 @@ Collect all static files into the configured directory to prepare them for deplo
 
 ## Testing
 ### Manual Testing
-### Performance testing
 ## Validation
 ### HTML Validation
 #### After using the HTML validator, many of the HTML had almost the exact same errors and warnings however, I decided to not fix them as they didn't hinder the functionality of my blog site.
@@ -214,7 +213,7 @@ Collect all static files into the configured directory to prepare them for deplo
 ### Bug/Errors/Warnings Fixes
 #### Overall there have been bugs/errors/warnings that came up during validation however, they will not affect the site functionality, even when deployed to Heroku.
 
-## Site testing
+## Site Performance Testing
 #### To test my website for mobile and desktop compatibility I used the site [PageSpeed Insights](https://pagespeed.web.dev/). This site tester is very versitile in providing detailed diagnostics.
 [Mobile Results 1](./readmemedia/screenshots/Desktop/Testresult1.png)
 
@@ -236,5 +235,26 @@ Collect all static files into the configured directory to prepare them for deplo
 
 ## Future Features/Considerations
 #### At the beginning of this project, I followed the MoSCoW prioritisation method, instead of making a Won't Have label I decided it's best to make a Future Consideration label as many apps and website constantly evolve. 
+#### Here are the features that will be implemented in the future-
+#### Acceptance criteria:
+* Blog posts have tags and categories for easy filtering.
+A signup and a delete account option should be available to the user.
+Users can submit replies to existing comments, creating a threaded discussion.
+#### My site already has categories the feature that will implemented is the tags features
+
+#### User/Developer Stories:
+* As a user I can like and dislike a blog so that the use can gauge on other people's reaction to the information presented in the blog.
+#### I have the model for this user story meaning I have to create the logic and the like/dislike button for every blog.
+
+* As a user I can view a carousel of stocks so that I can start getting familiar with stocks.
+#### This is a features that will be implemented designed to entice users to learn more about the stock market, this will involve integrating an API into my site.
+
+* As a user I can click on load more so that can view more blog to read.
+#### Currently I have more than enough blogs published on my site, the purpose for these published blogs is to demostrate my website works, this is a feature that will be needed when more blogs are available for this features to be relevant.
+
+* As a developer I need to create code for css so that I can create site pages based on the wireframe.
+#### This is another feature that will be impletement in the future as more users are active on the site, especially the "links to other blogs" feature, at the moment the comment section is in the place of the feature.
+
+#### Note - These features are listed as unticked acceptance criterias or incomplete developer/users tories with the label future consideration in different Kanban boards. 
 
 ## Acknowledgements
