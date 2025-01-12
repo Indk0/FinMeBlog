@@ -200,9 +200,16 @@ Collect all static files into the configured directory to prepare them for deplo
 [Flake8 error](./readmemedia/screenshots/Flake8errorflag.png)
 #### This error will remain unsolved as it doesn't affect the overall blog site function.
 
-### JS Validation
-
 #### The errors from crucial files like settings and env.py, were not solved as manipulating these codes will affect the whole project code, creating simple errors that wouldn't be there in the first place.
+
+### JS Validation
+#### From the three custom JS code files, there were no errors this was evident from the manual testing and the JSHint validator:
+
+[JS Hint Validator](https://jshint.com/)
+
+[Common JS Hint Validator](./readmemedia/screenshots/JSHintexample.png)
+
+#### As seen from the example above, the warning "ES6 (use 'esversion:6')", is present when validating all of the custom JS code, this is just a warning that will not hinder the site functionality therefore, no bug fixes were planned and executed.
 
 ### Bug/Errors/Warnings Fixes
 #### Overall there have been bugs/errors/warnings that came up during validation however, they will not affect the site functionality, even when deployed to Heroku.
