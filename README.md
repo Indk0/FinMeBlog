@@ -16,9 +16,11 @@
   - [Security](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#security)
 - [Project Management](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#project-managements)
   - [Agile Methodologies](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#agile-methodologies)
+  - [User Epics](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#user-epics)
   - [User Stories](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#user-story)
   - [MoSCoW](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#moscow)
   - [Sprints](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#sprints)
+  - [MVP](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#mvp-minimal-viable-product)
 - [Design](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
   - [Colour Pallets](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#colour-pallets)
   - [Font](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#font)
@@ -27,12 +29,21 @@
   - [Languages/Frameworks](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#languagesframeworks)
   - [Database](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#database)
   - [Other tools](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#other-tools)
-  - [Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deployment)
-- [GitHub Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#github-deployment)
-- [Deploying with Heroku](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deploying-with-heroku)
+- [Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deployment)
+  - [Pre-Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#pre-deployment)
+  - [GitHub Deployment](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#github-deployment)
+  - [Deploying with Heroku](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#deploying-with-heroku)
 - [Testing](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#testing)
-- [Future Features](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#testing)
-- [Credits](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#credits)
+  - [Manual Testing](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#manual-testing)
+- [Validation](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#validation)
+  - [HTML Validation](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#html-validation)
+  - [CSS Validation](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#css-validation)
+  - [Python Validation](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#python-validation)
+  - [JS Validation](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#js-validation)
+  - [Bug/Errors/Warnings Fixes](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#bugerrorswarnings-fixes)
+- [Site Performance Testing](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#site-performance-testing)
+- [Fixes After Site Testing](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#fixes-after-site-testing)
+- [Future Features/Considerations](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#future-featuresconsiderations)
 - [Acknoledgements](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#acknowledgements)
 
 ## Project Overview
@@ -40,7 +51,7 @@
 #### The key goal for this project is to create a functioning personal finance blog for readers who want to increase their personal finance knowledge. Readers will be able to select from a variety of blog which explore topics from investing to budgeting. The blog will also have a carousel of stocks on the home and blog pages, this however will be a could have feature.
 ### Target audience
 #### My target audience are people who are interested in personal finance aged between 18-35, my target audience could be as young as 16. My target audience will also be very aware of how important financial health is for themselves.
-### User Requirements -  The projects have all of the in-depth issues. These are the basic user requirements:
+### User Requirements - The projects have all of the in-depth issues. These are the basic user requirements:
 #### Must Have: User Should be able to access the site and read the many blogs available.
 #### Should Have: Should blogs may contain guides and tips to help readers take actionable steps on their personal finances.
 #### Could Have: Readers can also create accounts from which they can post blogs and comment
