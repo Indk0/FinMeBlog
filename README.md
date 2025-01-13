@@ -223,8 +223,8 @@ Collect all static files into the configured directory to prepare them for deplo
 |Homepage|Navbar Logo|Click logo to go home|Home page is loaded from any page|
 |Homepage|Navbar Home button|Click home to go to the home page|Home page is loaded from any page|
 |Homepage|Navbar Category button|Dropdown menu with approved categories|All of the categories are shown|
-|Homepage|Navbar Register|Allows users to register an account|Takes users to page for registration|
-|Homepage|Navbar Sign-in|Allows users to sign in|Takes users to the sign in page|
+|Register|Navbar Register|Allows users to register an account|Takes users to page for registration, after register the user is taken to the homepage with a displayed message|
+|Sign in|Navbar Sign in|Allows users to sign in|Takes users to the sign in page|
 |Homepage|Navbar Account page |CRUD functionality for blogs, comments and categories|FEATURES TESTED SEPERATELY|
 |Homepage|Read blogs|Click on a blog and read|The blog is loaded with the title, content and image|
 |Homepage|Comment on blogs|A logged in user will be able to comment on a blog post|A message is displayed when a comment is submitted for approval|
@@ -245,16 +245,18 @@ Collect all static files into the configured directory to prepare them for deplo
 |Account|Save edited approved comments|The user is able to edit an approved comment|Once the user saves changes the user is taken back to the account page and a message is displayed|
 |Account|Delete approved comments|The user is able to delete approved comments|The user is taken back to the accounts page where a message is displayed|
 |Account|Cancel deletion of approved comment|The user is able cancel the deletion of an approved comment|The user is taken back to the accounts page|
-|Account|Edit pending approval comments|The user is able to edit pending approval comments||
+|Account|Edit pending approval comments|The user is able to edit pending approval comments|The user is taken to a edit comment form|
 |Account|Save pendign approval comments|The user is able to save the changed comment|The user is taken back to the accounts page with a message displayed|
 |Account|Edit approved category|The user is able to edit approved category|The user is taken to a edit category form|
 |Account|Save approved category|The user is able to save changes when editing category|The user is taken accounts page where a message is displayed|
 |Account|Cancel edit of approved category|The user is able to cancel the deletion of category|The user is taken to the account page when cancel button is clicked|
-|Account||||
-|Account||||
-|Account||||
-|Account||||
-|Account||||
+|Account|Delete approved category|The user is able to delete a category|When delete is clicked the user is taken back to the accounts page where a message is displayed|
+|Account|Edit a pending approval category|The user is able to edit pending approval category|The user is taken to a edit category form|
+|Account|Cancel edit of a pending approval category|The user is able to cancel editing a pending approval category|The user is taken back to the accounts page|
+|Account|Save edited pending approval category|The user is able to save changes to the edited category|The user is taken back the accounts page where a message is displayed|
+|Account|Delete pending approval category|The user is able to delete a pending approval category|The user is redirected to the accounts page|
+|Account|Cancel deletion of a pending approval category|The user is able to cancel deletion of a pending approval category page|The user is taken back to the account page|
+|Sign out page|Navbar sign out|The user is taken to a sign out page wher a sign out button is displayed|When the user clicks sign out page it redirects them to the homepage with a displayed message|
 
 
 
