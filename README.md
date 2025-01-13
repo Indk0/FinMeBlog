@@ -139,7 +139,7 @@
 ### Font
 #### The site had default fonts of Robot and Lato, which are taken from Google Fonts.
 ### Favicon
-#### To get the favicon for my site, I used the site:
+#### To get the favicon, I used the site:
 [Favicon Generator](https://favicon.io/)
 
 #### The design of the favicon is simple, it is the first initial of the website name coloured in #40916C with a white background to make it stand out. The font of the favicon is Hind which closely matches the website font.
