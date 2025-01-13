@@ -220,6 +220,8 @@ Collect all static files into the configured directory to prepare them for deplo
 ### Messages
 #### All of the message feedback for the user work as designed.
 
+### All of these features work on mobile and desktop.
+
 ## Validation
 ### HTML Validation
 #### After using the HTML validator, many of the HTML had almost the exact same errors and warnings however, I decided to not fix them as they didn't hinder the functionality of my blog site.
@@ -272,6 +274,7 @@ Collect all static files into the configured directory to prepare them for deplo
 [Desktop Results 4](./readmemedia/screenshots/Desktop/Testresult4.png)
 
 ## Fixes After Site Testing
+#### No fixes were needed after site testing.
 
 ## Future Features/Considerations
 #### At the beginning of this project, I followed the MoSCoW prioritisation method, instead of making a Won't Have label I decided it's best to make a Future Consideration label as many apps and website constantly evolve. 
