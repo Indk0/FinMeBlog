@@ -49,6 +49,7 @@
 ## Project Overview
 ### Key goals
 #### The key goal for this project is to create a functioning personal finance blog for readers who want to increase their personal finance knowledge. Readers will be able to select from a variety of blog which explore topics from investing to budgeting. The blog will also have a carousel of stocks on the home and blog pages, this however will be a could have feature.
+![FinMe Blog on various screens](./readmemedia/screenshots/responsive.png)
 ### Target audience
 #### My target audience are people who are interested in personal finance aged between 18-35, my target audience could be as young as 16. My target audience will also be very aware of how important financial health is for themselves.
 ### User Requirements - The projects have all of the in-depth issues. These are the basic user requirements:
