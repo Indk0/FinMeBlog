@@ -199,8 +199,22 @@ Collect all static files into the configured directory to prepare them for deplo
 ### GitHub Deployment
 #### GitHub will be used to host the code of my blog site, this is where the ReadMe will be hosted and the Kanban board along with the user epics, developer and user stories.
 ### Deploying with Heroku
-#### Through out creating the project, Heroku was used to deploy the pushed version of my website, this was done to test for bugs that may occur during the deployment to Heroku. Heroku will also be used to deploy the final version of my site once it has been tested for errors.
-[Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
+#### Through out creating the project, Heroku was used to deploy the pushed version of my website, this was done to test for bugs that may occur during the deployment to Heroku. Heroku will also be used to deploy the final version of my site once it has been tested for errors. Here are the steps to deploy to Heroku:
+1. Create New App: Log in to your Heroku account and click on the "Create New App" button.
+2. App Name: Choose a unique name for your app.
+3. Select Region: Choose the appropriate region (Europe was selected for this project).
+4. Create App: Click the "Create App" button to proceed.
+5. Deployment Method: In the "Deploy" tab, select GitHub as the deployment method.
+6. Connect to GitHub: Search for the repository name and click "Connect".
+7. Manual Deployment: Select manual deployment. Ensure the main branch is selected for deployment.
+8. Config Vars: In the "Settings" tab, click "Reveal Config Vars" and input the required environment variables.
+9. Buildpack: Select Python as the buildpacks for your project.
+10. Deploy: Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
+
+#### This is the live link for the site: [FinMe Blog](https://finmeblog-33a071e49209.herokuapp.com/)
+
+#### This is the Heroku deployment message [Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
+
 
 # Testing
 ## Manual Testing
