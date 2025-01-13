@@ -64,6 +64,8 @@
 
 #### Yahoo Finance is more geared towards readers who have an advanced knowledge in topics such as the economy and the American stock market, FinMe will be aimed at readers who are at the beginning stages of their personal financial journey to advanced readers who might want to use FinMe as an analysis platform to gauge on consumer interest.
 
+#### I have also taken ideas and inspiration from the blog walkthrough from Code Institute
+
 ## Planning
 ### Wireframes
 #### Here are my wireframes for this project, the mobile and desktop version are in one document for each wireframe.
