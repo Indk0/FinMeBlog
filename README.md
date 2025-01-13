@@ -215,6 +215,11 @@ Collect all static files into the configured directory to prepare them for deplo
 
 #### This is the Heroku deployment message [Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
 
+### Fork Repository
+#### To fork this repository.
+1. Open my [GitHub repository](https://github.com/Indk0/FinMeBlog).
+2. Click on the 'Fork' button on the top right of the screen.
+3. On the 'Create a new fork' page you are given the option to rename that repository and then click on the green 'Create fork' button at the bottom of the form.
 
 # Testing
 ## Manual Testing
