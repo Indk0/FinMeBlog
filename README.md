@@ -258,10 +258,6 @@ Collect all static files into the configured directory to prepare them for deplo
 |Account|Cancel deletion of a pending approval category|The user is able to cancel deletion of a pending approval category page|The user is taken back to the account page|
 |Sign out page|Navbar sign out|The user is taken to a sign out page wher a sign out button is displayed|When the user clicks sign out page it redirects them to the homepage with a displayed message|
 
-
-
-
-
 ## Validation
 ### HTML Validation
 #### After using the HTML validator, many of the HTML had almost the exact same errors and warnings however, I decided to not fix them as they didn't hinder the functionality of my blog site.
