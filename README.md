@@ -2,7 +2,7 @@
 
 ## Introduction
 
-#### FinMe is a finance blog aimed at people who are interested in expanding their personal finance knowledge through reading blog about the basic to expert level personal finance knowledge. Add more later including amiresponsive image.
+#### FinMe is a finance blog aimed at people who are interested in expanding their personal finance knowledge through reading blogs about the basic to expert level personal financial knowledge.
 
 ## Table of Contents
 - [Introduction](https://github.com/Indk0/FinMeBlog?tab=readme-ov-file#introduction)
@@ -50,6 +50,7 @@
 ### Key goals
 #### The key goal for this project is to create a functioning personal finance blog for readers who want to increase their personal finance knowledge. Readers will be able to select from a variety of blog which explore topics from investing to budgeting. The blog will also have a carousel of stocks on the home and blog pages, this however will be a could have feature.
 ![FinMe Blog on various screens](./readmemedia/screenshots/responsive.png)
+
 ### Target audience
 #### My target audience are people who are interested in personal finance aged between 18-35, my target audience could be as young as 16. My target audience will also be very aware of how important financial health is for themselves.
 ### User Requirements - The projects have all of the in-depth issues. These are the basic user requirements:
@@ -57,8 +58,9 @@
 #### Should Have: Should blogs may contain guides and tips to help readers take actionable steps on their personal finances.
 #### Could Have: Readers can also create accounts from which they can post blogs and comment
 ### Future consideration are listed at the bottom of this ReadMe file.
+
 ### Inspiration
-#### The inspiration from for this blog comes from a similiar site called Yahoo Finance, I have used Yahoo Finance in the past to read on news regarding the economy and the financial health of American technology companies. The key difference is that FinMe will be tailored more towards to personal finance instead of the American stock market. 
+#### The inspiration for this blog comes from a site called Yahoo Finance, I have used Yahoo Finance in the past to read on news regarding the economy and the financial health of American technology companies. The key difference is that FinMe Blog will be tailored more towards to personal finance instead of the American stock market. 
 
 #### Yahoo Finance is more geared towards readers who have an advanced knowledge in topics such as the economy and the American stock market, FinMe will be aimed at readers who are at the beginning stages of their personal financial journey to advanced readers who might want to use FinMe as an analysis platform to gauge on consumer interest.
 
@@ -69,11 +71,12 @@
 - [Wireframe for Blog Page](./readmemedia/wireframes/BlogPage.pdf)
 - [Wireframe for Blog Page Footer](./readmemedia/wireframes/BlogPageFooter.pdf)
 ### ERD Diagrams
-#### The ERD Diagram was made using a tool called Lucidchart.
+#### The ERD Diagram was made using a tool called [Lucidchart](https://lucid.co/).
+
 [ERD Diagram](./readmemedia/ERD/FinMe%20ERD.pdf)
 
 ### Changes to the ERD Diagram
-#### Throught the project many changes were made to the models to accomodate features for the blog, for example the category model now has an author entity which is used to determine whether the author(user) has created a category field as part of the custom CRUD functionality coded for this project.
+#### Throught the project many changes were made to the models to accomodate features for the blog, for example the category model now has an author entity which is used to determine whether the author(user) has created a category field as part of the custom CRUD functionality coded for this project. These changes will not be visible in the ERD diagram
 
 ### Security
 #### Superuser log in details, use for testing purposes only! A normal user credentials can be created by registering on the website.
@@ -84,18 +87,18 @@
 
 ## Project Management
 ### Agile Methodologies
-#### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I am also going to use utilise kanban boards to help me track my progress, there will be 6 kanban boards, 5 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user stories which are made from two different types of stories.
+#### I decided to use many different agile methodologies to set and complete goals, to set goals I used user epics and stories. I also used kanban boards to help me track my progress, there will be 7 kanban boards, 6 of which are sprints, the Financial Blog kanban has the user epics whilst the rest of the boards have user/developer stories which are two different types of stories.
 ### User Epics
 #### The user epics are stored in the Financial Blog kanban board.
 - [Financial Blog kanban board screenshot at the time of building the project.](./readmemedia/screenshots/Userepickanban.png)
-### User Story
+### User/Developer Story
 #### There are two types of user story template I have created: a user and a developer template, the user template is created with the statement and acceptance criteria from the user perspective on the other hand, the developer template is created to help myself track goals through the statement and acceptance criteria. Most sprint kanban boards will have the developer template however, the user template can be added. Below is an example of a user story on a kanban board, please click on the user story title to see the acceptance criteria and the user story statement.
 
 ![User Stories on Kanban board](./readmemedia/screenshots/Userstoryexample.png)
 ![User Story when clicked on](./readmemedia/screenshots/Userstoryexample1.png)
 
 ### MoSCoW
-#### MoSCoW is used for the user stories, these are the labels used: Must Have, Could Have, Should Have and Future Consideration. Instead of using the "Won't Have" label, I will aim to create user stories based on features I could add to my blog in the future by using the label "Future Consideration". 
+#### MoSCoW is used for the user/developer stories, these are the labels used: Must Have, Could Have, Should Have and Future Consideration. Instead of using the "Won't Have" label, I will aim to create user stories based on features I could add to my blog in the future by using the label "Future Consideration". 
 ### Sprints
 #### I have broken down my project into 5 different sprints, for each sprint will have a dedicated label to help mark a user story:
 * Sprint 1: Initial Setup - The goal for this sprint is to complete the foundational set up for to allow for the project to tkae shape, this includes planning the wireframes, creating the readme file, downloading all the packages, creating the folders and files.  
@@ -106,15 +109,15 @@
 * Sprint 6: Blog Styling/Extras- This final stage will involve me focusing on styling the site this includes: making my site look like the wireframe, add branding, colours, favicon and other features that will make my blog unique. At this stage there will be more could have and future considerations depending on how much time I have left until submission.
 
 ## MVP (Minimal Viable Product)
-### I complete my MVP with the minimal amount of user/developer stories closed. My MVP, as seen in the image below, shows all of the acceptance criteria ticked, the MVP allows users to read and comment on any blog once registered and logged in. In this case the admin has majority of the features accessable as the admin can create and edit blogs, categories, comments, manipulate user and accounts all from the admin panel. 
+### I complete my MVP with the minimal amount of user/developer stories closed. My MVP, as seen in the image below, shows all of the acceptance criteria ticked, the MVP allows users to read and comment on any blog once registered and logged in. In this case both the admin and user has features accessable such as creating, editing and deleting blogs, categories, comments, approve or delete users from the admin panel. 
 
 ![MVP Developer Story](./readmemedia/screenshots/MVPdeveloperstory.png) 
 
-### The MVP blog site has some downsides if used as a product, users will not be able to create blogs as authors this is due to the lack of an account functionality where the author (user) can track the blogs and comments posted in the site. Another downside for the MVP is there's no image upload feature for the author and tha admin, this will significantly impact the user experience as images can help to set the tone for the blog.
+### Another downside for the MVP is there's no image upload feature for the author, this will significantly impact the user experience as images can help to set the tone for the blog.
 
 ## Design
 ### Colour Palletes
-#### Since my inspiration for this project is Yahoo Finance, I decided to follow a similar pathway when it came to adding colours to my blog, Yahoo Finance at most has 5 colours being used on the site, this could be done for a better readability for the users which will contribute to positive UX. Therefore I used as minimal colours as possible for my site:
+#### Since my inspiration for this project is Yahoo Finance, I decided to follow a similar style when it came to adding colours to my blog, Yahoo Finance at most has 5 colours being used on the site, this could be done for a better readability for users which will contribute to positive UX. Therefore, I used minimal colours for my site:
 ![Colour Pallet 1](./readmemedia/screenshots/Colour%20pallete%201.png)
 ![Colour Pallet 2](./readmemedia/screenshots/Colour%20pallete%202.png)
 #### Above are the two colour pallete I chose to implement for my site, out of the colours above the two pallates used were:
@@ -124,7 +127,7 @@
 #### #F9FAFC - This is the default background colour that is on across all sites, this colour is pleasent to the eye if users don't spend too much time reading blogs.
 
 ### Accounts section colours
-#### These were the other colours used for the styling of the accounts page:
+#### These were the other colours used for the styling of the accounts page, the colours were not chosen from a colour pallette and were picked based on colour psychology:
 #### #007bff - This blue colour is used for all of the edit, save changes, create blog and category buttons.
 #### #E74C3C - This colour is used for the delete button, delete buttons on many sites are red to sign a warning to the user.
 #### #198754 - This is the only button colour that stands out from the rest as it's green, used for the publish button.
