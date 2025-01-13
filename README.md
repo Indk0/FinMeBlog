@@ -211,33 +211,54 @@ Collect all static files into the configured directory to prepare them for deplo
 9. Buildpack: Select Python as the buildpacks for your project.
 10. Deploy: Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
 
-#### This is the live link for the site: [FinMe Blog](https://finmeblog-33a071e49209.herokuapp.com/)
+#### This is the live link for the site - [FinMe Blog](https://finmeblog-33a071e49209.herokuapp.com/)
 
 #### This is the Heroku deployment message [Heroku Deployment](./readmemedia/screenshots/HerokuDeployment.png)
 
 
 # Testing
 ## Manual Testing
-### Home Page
-#### The home works as designed.
-### Blogs
-#### All blog pages work as designed, including the comment sections.
-### Categories Pages
-#### Each individual category pages work as designed.
-### Accounts Page/Functionality
-#### The page itself works as designed including all of the functionality to create, edit and delete certain blog features like draft posts or comments. 
-### Sign in/out Pages
-#### Both pages work as intended.
-### Register Page
-#### The register page works as designed, including the password messages.
-### Admin Page
-#### The admin page works as designed.
-### Navigations
-#### All of the navigation work as intended, the dropdown menu works on all pages.
-### Messages
-#### All of the message feedback for the user work as designed.
+|Page|Feature|Functionality|Effect|
+|---|---|---|---|
+|Homepage|Navbar Logo|Click logo to go home|Home page is loaded from any page|
+|Homepage|Navbar Home button|Click home to go to the home page|Home page is loaded from any page|
+|Homepage|Navbar Category button|Dropdown menu with approved categories|All of the categories are shown|
+|Homepage|Navbar Register|Allows users to register an account|Takes users to page for registration|
+|Homepage|Navbar Sign-in|Allows users to sign in|Takes users to the sign in page|
+|Homepage|Navbar Account page |CRUD functionality for blogs, comments and categories|FEATURES TESTED SEPERATELY|
+|Homepage|Read blogs|Click on a blog and read|The blog is loaded with the title, content and image|
+|Homepage|Comment on blogs|A logged in user will be able to comment on a blog post|A message is displayed when a comment is submitted for approval|
+|Homepage|Comment on blogs|A logged in user will be able to comment on a blog|The approved comment is displayed in the comments section of the blog and the users account page|
+|Homepage|Edit comment from the blog page|A comment can be edited from the blog page|After changes are saved the accounts page is loaded with a message to the user|
+|Homepage|Delete comment from the blog page|A comment can be delete from the blog page|After the comment is deleted the accounts page is loaded with a message to the user|
+|Homepage|Category dropdown menu|The category dropdown is designed to display the approved categories|Approved categories are displayed on all pages|
+|Category pages|Category pages|Category pages host blogs under a common topic|All category pages have blogs that can be clicked on and read|
+|Account|Edit post|The user can edit post|After changes are submitted a message appears|
+|Account|Cancel edit post|Users can cancel the editing of a post|The user is taken back to the account page|
+|Account|Delete post|The user is able to delete their post|After the delete button is submitted the user is taken to the account page where a message|
+|Account|Cancel delete post|The user is able to cancel the deletion of a post|The user is taken back accounts page when cancel button is clicked|
+|Account|Create a published or draft blog|A user is able to create a published or draft blog|The user is taken to a blog post form|
+|Account|Edit draft post|The user is able to edit the draft post|A message appears after the user saves changes in the account page|
+|Account|Delete draft post|The user is able to delete a draft post|A message appears after the user deletes a draft post|
+|Account|Cancel delete draft post|The user is able to cancel the deletion of a draft post|The user is taken back to the account page|
+|Account|Edit approved comment|The user is able to edit an approved comment|The user is taken to an edit form and changes can be saved.|
+|Account|Save edited approved comments|The user is able to edit an approved comment|Once the user saves changes the user is taken back to the account page and a message is displayed|
+|Account|Delete approved comments|The user is able to delete approved comments|The user is taken back to the accounts page where a message is displayed|
+|Account|Cancel deletion of approved comment|The user is able cancel the deletion of an approved comment|The user is taken back to the accounts page|
+|Account|Edit pending approval comments|The user is able to edit pending approval comments||
+|Account|Save pendign approval comments|The user is able to save the changed comment|The user is taken back to the accounts page with a message displayed|
+|Account|Edit approved category|The user is able to edit approved category|The user is taken to a edit category form|
+|Account|Save approved category|The user is able to save changes when editing category|The user is taken accounts page where a message is displayed|
+|Account|Cancel edit of approved category|The user is able to cancel the deletion of category|The user is taken to the account page when cancel button is clicked|
+|Account||||
+|Account||||
+|Account||||
+|Account||||
+|Account||||
 
-### All of these features work on mobile and desktop.
+
+
+
 
 ## Validation
 ### HTML Validation
